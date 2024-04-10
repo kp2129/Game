@@ -1,0 +1,124 @@
+[gd_scene load_steps=10 format=3 uid="uid://cyogwhvrnunm2"]
+
+[ext_resource type="FontFile" uid="uid://f77brr674fgy" path="res://assets/font/Alphakind.ttf" id="1_7g0fr"]
+[ext_resource type="LabelSettings" uid="uid://bxioudgjyrh2h" path="res://assets/TitleSettings.tres" id="1_qupdr"]
+[ext_resource type="StyleBox" uid="uid://vukns3rgtx2m" path="res://assets/new_style_box_flat.tres" id="3_7ulis"]
+[ext_resource type="AudioStream" uid="uid://bnqux0ufq0kv4" path="res://assets/audio/Enchanted Journey.mp3" id="4_0e3wo"]
+[ext_resource type="AudioStream" uid="uid://cpqquu0tri1b2" path="res://assets/audio/ButtonClick.wav" id="5_lqqjh"]
+
+[sub_resource type="GDScript" id="GDScript_hyc8s"]
+script/source = "extends Control
+
+
+func _on_play_pressed():
+	$SoundPress.play()
+	await $SoundPress.finished
+	get_tree().change_scene_to_file(\"res://scenes/world.tscn\")
+
+
+func _on_options_pressed():
+	$SoundPress.play()
+	await $SoundPress.finished
+	pass # Replace with function body.
+
+func _on_statistics_pressed():
+	$SoundPress.play()
+	await $SoundPress.finished
+	get_tree().change_scene_to_file(\"res://scenes/statistics.tscn\")
+
+func _on_quit_pressed():
+	$SoundPress.play()
+	await $SoundPress.finished
+	get_tree().quit()
+"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_syreg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b4o5h"]
+
+[sub_resource type="Theme" id="Theme_a2h41"]
+default_font = ExtResource("1_7g0fr")
+default_font_size = 100
+Button/colors/font_color = Color(0.835294, 0.376471, 0.65098, 1)
+Button/colors/font_disabled_color = Color(0.756863, 0.768627, 0.819608, 1)
+Button/colors/font_focus_color = Color(0.835294, 0.376471, 0.65098, 1)
+Button/colors/font_hover_color = Color(0.835294, 0.376471, 0.65098, 1)
+Button/colors/font_hover_pressed_color = Color(0.835294, 0.376471, 0.65098, 1)
+Button/colors/font_pressed_color = Color(0.835294, 0.376471, 0.65098, 1)
+Button/constants/outline_size = 29
+Button/font_sizes/font_size = 119
+Button/fonts/font = ExtResource("1_7g0fr")
+Button/styles/disabled = SubResource("StyleBoxEmpty_syreg")
+Button/styles/focus = ExtResource("3_7ulis")
+Button/styles/hover = ExtResource("3_7ulis")
+Button/styles/normal = SubResource("StyleBoxEmpty_b4o5h")
+Button/styles/pressed = ExtResource("3_7ulis")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_hyc8s")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.403922, 0.627451, 0.588235, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 89.0
+offset_right = 1918.0
+offset_bottom = 443.0
+text = "Flightless Faeries"
+label_settings = ExtResource("1_qupdr")
+horizontal_alignment = 1
+justification_flags = 128
+uppercase = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 380.0
+offset_right = 1212.0
+offset_bottom = 964.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_a2h41")
+alignment = 1
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Play"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+disabled = true
+text = "Options"
+
+[node name="Statistics" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Statistics"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0e3wo")
+volume_db = -12.037
+autoplay = true
+
+[node name="SoundPress" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_lqqjh")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Statistics" to="." method="_on_statistics_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

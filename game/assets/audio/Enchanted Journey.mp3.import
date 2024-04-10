@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnqux0ufq0kv4"
+path="res://.godot/imported/Enchanted Journey.mp3-fa3676cee88c8c02e37d12234217eb6e.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Enchanted Journey.mp3"
+dest_files=["res://.godot/imported/Enchanted Journey.mp3-fa3676cee88c8c02e37d12234217eb6e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
