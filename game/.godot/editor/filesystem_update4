@@ -1,9 +1,0 @@
-res://obstacle.tscn
-res://scenes/player.tscn
-res://scenes/menu.tscn
-res://scenes/background.tscn
-res://scenes/floor.tscn
-res://scenes/hud.tscn
-res://scenes/statistics.tscn
-res://scenes/world.tscn
-res://script/world.gd
