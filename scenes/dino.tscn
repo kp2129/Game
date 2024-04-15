@@ -1,97 +1,123 @@
-[gd_scene load_steps=24 format=3 uid="uid://bhtein0chknfn"]
+[gd_scene load_steps=32 format=3 uid="uid://bhtein0chknfn"]
 
-[ext_resource type="Texture2D" uid="uid://c525jycvvecyd" path="res://assets/img/mort.png" id="1_0g0lj"]
 [ext_resource type="Script" path="res://scenes/dino.gd" id="1_1stpw"]
 [ext_resource type="AudioStream" uid="uid://dscpg6m666dta" path="res://assets/sound/jump.wav" id="2_60go1"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yd527"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(432, 0, 24, 24)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pokef"]
+load_path = "res://.godot/imported/Attack 1.png-5a5f3fb343ab47937c9c4bba917270ad.ctex"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6pkom"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(456, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_eua78"]
+atlas = SubResource("CompressedTexture2D_pokef")
+region = Rect2(0, 0, 86, 86)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_86rni"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(480, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hfgs"]
+atlas = SubResource("CompressedTexture2D_pokef")
+region = Rect2(86, 0, 86, 86)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ld1xe"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(504, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8lmf"]
+atlas = SubResource("CompressedTexture2D_pokef")
+region = Rect2(172, 0, 86, 86)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mepx1"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(528, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dqry"]
+atlas = SubResource("CompressedTexture2D_pokef")
+region = Rect2(258, 0, 86, 86)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3381h"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(552, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_prara"]
+atlas = SubResource("CompressedTexture2D_pokef")
+region = Rect2(344, 0, 86, 86)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ei87"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(0, 0, 24, 24)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sxw6v"]
+load_path = "res://.godot/imported/Hurt.png-86607db5f586249eebf44313af873783.ctex"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y3mg4"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(24, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_adgev"]
+atlas = SubResource("CompressedTexture2D_sxw6v")
+region = Rect2(0, 0, 70, 86)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bsqdf"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(48, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_k13sk"]
+atlas = SubResource("CompressedTexture2D_sxw6v")
+region = Rect2(70, 0, 70, 86)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tuxgy"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(72, 0, 24, 24)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pxbop"]
+load_path = "res://.godot/imported/Idle.png-9e75c1538c93c9e356daa1134d4b4412.ctex"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dwidy"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(264, 0, 24, 24)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y6jlr"]
+load_path = "res://.godot/imported/Jump.png-7ae44f12fef95bc97f898cc5cdbab747.ctex"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n82i4"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(96, 0, 24, 24)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gypp6"]
+load_path = "res://.godot/imported/Jump.png-c4795b91eaad30bfee1747f9eaa6ec79.ctex"
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tetch"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(120, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6mmk"]
+atlas = SubResource("CompressedTexture2D_gypp6")
+region = Rect2(15, 14, 77, 72)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gfi40"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(144, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2haf"]
+atlas = SubResource("CompressedTexture2D_gypp6")
+region = Rect2(92, 14, 77, 72)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mrqvf"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(168, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bingy"]
+atlas = SubResource("CompressedTexture2D_gypp6")
+region = Rect2(169, 14, 77, 72)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xq4k5"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(192, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jvk6"]
+atlas = SubResource("CompressedTexture2D_gypp6")
+region = Rect2(246, 14, 77, 72)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iaoc2"]
-atlas = ExtResource("1_0g0lj")
-region = Rect2(216, 0, 24, 24)
+[sub_resource type="AtlasTexture" id="AtlasTexture_tddjx"]
+atlas = SubResource("CompressedTexture2D_gypp6")
+region = Rect2(323, 14, 77, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vydhm"]
+atlas = SubResource("CompressedTexture2D_gypp6")
+region = Rect2(400, 14, 77, 72)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2i1te"]
+load_path = "res://.godot/imported/Run.png-fea69a4ac3aad92c368bf9d012a629a2.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_easbq"]
+atlas = SubResource("CompressedTexture2D_2i1te")
+region = Rect2(0, 0, 71, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2qke"]
+atlas = SubResource("CompressedTexture2D_2i1te")
+region = Rect2(71, 0, 71, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id0c2"]
+atlas = SubResource("CompressedTexture2D_2i1te")
+region = Rect2(142, 0, 71, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f1re"]
+atlas = SubResource("CompressedTexture2D_2i1te")
+region = Rect2(213, 0, 71, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j21xt"]
+atlas = SubResource("CompressedTexture2D_2i1te")
+region = Rect2(284, 0, 71, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ql20r"]
+atlas = SubResource("CompressedTexture2D_2i1te")
+region = Rect2(355, 0, 71, 86)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fung"]
+atlas = SubResource("CompressedTexture2D_2i1te")
+region = Rect2(426, 0, 71, 86)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6wmvf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yd527")
+"texture": SubResource("AtlasTexture_eua78")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6pkom")
+"texture": SubResource("AtlasTexture_8hfgs")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_86rni")
+"texture": SubResource("AtlasTexture_j8lmf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ld1xe")
+"texture": SubResource("AtlasTexture_0dqry")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mepx1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3381h")
+"texture": SubResource("AtlasTexture_prara")
 }],
 "loop": true,
 "name": &"duck",
@@ -99,16 +125,18 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7ei87")
+"texture": SubResource("AtlasTexture_adgev")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y3mg4")
+"texture": SubResource("AtlasTexture_k13sk")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
 }, {
+"frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bsqdf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tuxgy")
+"texture": SubResource("CompressedTexture2D_pxbop")
 }],
 "loop": true,
 "name": &"idle",
@@ -116,7 +144,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dwidy")
+"texture": SubResource("CompressedTexture2D_y6jlr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6mmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2haf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bingy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jvk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tddjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vydhm")
 }],
 "loop": true,
 "name": &"jump",
@@ -124,33 +170,36 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n82i4")
+"texture": SubResource("AtlasTexture_easbq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tetch")
+"texture": SubResource("AtlasTexture_l2qke")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gfi40")
+"texture": SubResource("AtlasTexture_id0c2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mrqvf")
+"texture": SubResource("AtlasTexture_2f1re")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xq4k5")
+"texture": SubResource("AtlasTexture_j21xt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iaoc2")
+"texture": SubResource("AtlasTexture_ql20r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fung")
 }],
-"loop": true,
+"loop": false,
 "name": &"run",
 "speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_whux2"]
-size = Vector2(10, 16)
+size = Vector2(9.125, 19.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t1b5m"]
-size = Vector2(10, 14)
+size = Vector2(8.875, 10.375)
 
 [node name="Dino" type="CharacterBody2D"]
 z_index = 1
@@ -159,16 +208,19 @@ script = ExtResource("1_1stpw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_6wmvf")
-animation = &"duck"
+animation = &"run"
 autoplay = "idle"
+frame = 6
+frame_progress = 1.0
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(-0.5625, 3.3125)
 shape = SubResource("RectangleShape2D_whux2")
 
 [node name="DuckCol" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 1)
+position = Vector2(-0.4375, 7.6875)
 shape = SubResource("RectangleShape2D_t1b5m")
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]

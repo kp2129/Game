@@ -1,0 +1,5 @@
+res://scenes/game_over.tscn
+res://scenes/main.tscn
+res://scenes/dino.tscn
+res://scenes/bird.tscn
+res://scenes/dino.gd
