@@ -1,0 +1,40 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1713160360
+icon.svg::CompressedTexture2D::2890521655358319432::1713159669::1713159732::1::::<><>::
+Obstacle.gd::GDScript::-1::1713160360::0::1::::<>Sprite2D<>::
+obstacle.tscn::PackedScene::5139316748873384770::1713160414::0::1::::<><>::uid://sbavpki2jww7::::res://assets/images/log.png<>res://Obstacle.gd
+::res://assets/::1713159669
+LabelSettings.tres::LabelSettings::8864390376964343703::1713159666::0::1::::<><>::uid://f77brr674fgy::::res://assets/font/Alphakind.ttf
+new_style_box_flat.tres::StyleBoxFlat::1515884646184324630::1713159669::0::1::::<><>::
+TitleSettings.tres::LabelSettings::4018165030457697505::1713159666::0::1::::<><>::uid://f77brr674fgy::::res://assets/font/Alphakind.ttf
+ui.tres::Theme::3191952287260833590::1713159669::0::1::::<><>::
+::res://assets/audio/::1713159733
+ButtonClick.wav::AudioStreamWAV::5859712343757454229::1713159666::1713159733::1::::<><>::
+Enchanted Journey.mp3::AudioStreamMP3::3333162452397015671::1713159667::1713159732::1::::<><>::
+JumpSound.wav::AudioStreamWAV::389504810704534977::1713159667::1713159733::1::::<><>::
+SoundGrassRun.wav::AudioStreamWAV::6755828623761368058::1713159667::1713159733::1::::<><>::
+::res://assets/font/::1713159732
+Alphakind.ttf::FontFile::418949956493540736::1713159667::1713159732::1::::<><>::
+::res://assets/images/::1713160047
+background_layer_1.png::CompressedTexture2D::4527798312199740351::1713159667::1713159732::1::::<><>::
+background_layer_2.png::CompressedTexture2D::5003494290611961108::1713159668::1713159732::1::::<><>::
+background_layer_3.png::CompressedTexture2D::515039866659284836::1713159668::1713159732::1::::<><>::
+floor.png::CompressedTexture2D::3063552835557725369::1713159668::1713159733::1::::<><>::
+icon.png::CompressedTexture2D::671632056517189258::1713159668::1713159732::1::::<><>::
+log.png::CompressedTexture2D::1265501868608886236::1713160047::1713160047::1::::<><>::
+TitleImage.png::CompressedTexture2D::7187850413925392126::1713159667::1713159732::1::::<><>::
+::res://assets/modelsprites/::1713159733
+Pixity Foxglove.png::CompressedTexture2D::2769405873668639329::1713159668::1713159732::1::::<><>::
+::res://scenes/::1713159672
+background.tscn::PackedScene::7034033043980464688::1713159669::0::1::::<><>::uid://b5rkgaik7aesl::::res://assets/images/background_layer_1.png<>uid://cdjy244gkvliq::::res://assets/images/background_layer_2.png<>uid://hlqvp32h60m7::::res://assets/images/background_layer_3.png
+floor.tscn::PackedScene::2402018008911254350::1713159670::0::1::::<><>::uid://bjwajdmgfwj34::::res://assets/images/floor.png
+hud.tscn::PackedScene::5211692824870420021::1713159670::0::1::::<><>::uid://dyj8hj38cjxyd::::res://assets/LabelSettings.tres
+menu.tscn::PackedScene::6486678893573242551::1713159671::0::1::::<><>::uid://f77brr674fgy::::res://assets/font/Alphakind.ttf<>uid://bxioudgjyrh2h::::res://assets/TitleSettings.tres<>uid://vukns3rgtx2m::::res://assets/new_style_box_flat.tres<>uid://bnqux0ufq0kv4::::res://assets/audio/Enchanted Journey.mp3<>uid://cpqquu0tri1b2::::res://assets/audio/ButtonClick.wav
+player.tscn::PackedScene::5785318925931902580::1713159671::0::1::::<><>::uid://bfprye5yl1x1r::::res://assets/modelsprites/Pixity Foxglove.png<>res://script/player.gd<>uid://c3itrmasptdiw::::res://assets/audio/SoundGrassRun.wav<>uid://fsxc77hpu4c0::::res://assets/audio/JumpSound.wav
+statistics.tscn::PackedScene::5611127545731325135::1713159671::0::1::::<><>::uid://bxioudgjyrh2h::::res://assets/TitleSettings.tres<>uid://dyj8hj38cjxyd::::res://assets/LabelSettings.tres
+world.tscn::PackedScene::7832284044504981591::1713159672::0::1::::<><>::uid://coopmfh1typyy::::res://scenes/player.tscn<>res://script/world.gd<>uid://bahs5d3jopan3::::res://scenes/floor.tscn<>uid://c7hlq5amwtt01::::res://scenes/background.tscn<>uid://cgit24hhmrlmj::::res://scenes/hud.tscn
+::res://script/::1713159672
+Autoload.gd::GDScript::-1::1713159672::0::1::::<>Node<>::
+GlobalStatistics.gd::GDScript::-1::1713159672::0::1::::<>Node<>::
+player.gd::GDScript::-1::1713159672::0::1::::<>CharacterBody2D<>::
+world.gd::GDScript::-1::1713159672::0::1::::<>Node<>::

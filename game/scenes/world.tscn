@@ -15,6 +15,7 @@ position = Vector2(4, 216)
 [node name="Background" parent="." instance=ExtResource("3_ua0fx")]
 
 [node name="Player" parent="." instance=ExtResource("1_6sj3s")]
+visibility_layer = 6
 position = Vector2(221, 904)
 
 [node name="Camera2D" type="Camera2D" parent="."]

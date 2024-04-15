@@ -10,7 +10,7 @@ var game_running : bool
 const DISTANCE_MODIFIER : int = 100
 const PLAYER_START_POS := Vector2i(221, 904)
 const CAM_START_POS := Vector2i(960, 520)
-const START_SPEED : float = 1
+const START_SPEED : float = 10
 const MAX_SPEED : int = 25
 const SPEED_MODIFIER : int = 10000
 
@@ -38,14 +38,15 @@ func _process(delta):
 		if speed > MAX_SPEED:
 			speed = MAX_SPEED
 		
-		# move dino and camera
+		# move dino
 		$Player.position.x += speed
-		$Camera2D.position.x += speed
+		
+		# update camera position to follow the player
+		$Camera2D.position.x = $Player.position.x
 		
 		# update score
 		distance += speed
 		show_distance()
-		print(speed)
 		
 		# update ground position
 		if $Camera2D.position.x - $Floor.position.x > screen_size.x * 1.5:
