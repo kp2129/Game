@@ -1,49 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsvydlk5yh3uk"]
+[gd_scene load_steps=4 format=3 uid="uid://dksmmq3icnlny"]
 
-[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_txpgd"]
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_jtwa8"]
 [ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="2_u5sxx"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_hgsd6"]
+[sub_resource type="LabelSettings" id="LabelSettings_hkued"]
 font = ExtResource("2_u5sxx")
-font_size = 169
-outline_size = 35
+font_size = 69
+outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 
-[node name="MainMenu" type="Control"]
+[node name="main_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 768.0
-offset_bottom = 432.0
+offset_right = -308.0
+offset_bottom = -258.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_txpgd")
+script = ExtResource("1_jtwa8")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0.184314, 0, 0.337255, 1)
+offset_right = 844.0
+offset_bottom = 390.0
+color = Color(0.160784, 0.160784, 0.160784, 1)
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 2
-offset_left = 1.0
-offset_top = 82.0
-offset_right = 1918.0
-offset_bottom = 436.0
-text = "(k)Night Runner"
-label_settings = SubResource("LabelSettings_hgsd6")
+layout_mode = 0
+offset_right = 844.0
+offset_bottom = 100.0
+text = "(k)Night runner"
+label_settings = SubResource("LabelSettings_hkued")
 horizontal_alignment = 1
+vertical_alignment = 1
 justification_flags = 128
 uppercase = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_left = 682.0
-offset_top = 380.0
-offset_right = 1212.0
-offset_bottom = 964.0
+offset_left = 240.0
+offset_top = 150.0
+offset_right = 640.0
+offset_bottom = 350.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
