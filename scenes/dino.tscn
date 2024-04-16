@@ -191,7 +191,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_whux2"]
-size = Vector2(9.125, 19.125)
+size = Vector2(9.125, 13.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t1b5m"]
 size = Vector2(8.875, 10.375)
@@ -206,12 +206,14 @@ texture_filter = 1
 position = Vector2(6.6, -12.65)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_6wmvf")
-animation = &"jump"
+animation = &"run"
 autoplay = "idle"
+frame = 6
+frame_progress = 1.0
 metadata/_edit_group_ = true
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
-position = Vector2(6.038, -12.15)
+position = Vector2(6.038, -10)
 scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_whux2")
 metadata/_edit_group_ = true
