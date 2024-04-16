@@ -1,7 +1,8 @@
-[gd_scene load_steps=32 format=3 uid="uid://bhtein0chknfn"]
+[gd_scene load_steps=31 format=3 uid="uid://bhtein0chknfn"]
 
 [ext_resource type="Script" path="res://scenes/dino.gd" id="1_1stpw"]
 [ext_resource type="AudioStream" uid="uid://dscpg6m666dta" path="res://assets/sound/jump.wav" id="2_60go1"]
+[ext_resource type="Texture2D" uid="uid://64elsk3sj6mx" path="res://Jump.png" id="2_myay2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pokef"]
 load_path = "res://.godot/imported/Attack 1.png-5a5f3fb343ab47937c9c4bba917270ad.ctex"
@@ -40,35 +41,29 @@ region = Rect2(70, 0, 70, 86)
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pxbop"]
 load_path = "res://.godot/imported/Idle.png-9e75c1538c93c9e356daa1134d4b4412.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y6jlr"]
-load_path = "res://.godot/imported/Jump.png-7ae44f12fef95bc97f898cc5cdbab747.ctex"
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx6wk"]
+atlas = ExtResource("2_myay2")
+region = Rect2(23, 0, 76, 86)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gypp6"]
-load_path = "res://.godot/imported/Jump.png-c4795b91eaad30bfee1747f9eaa6ec79.ctex"
+[sub_resource type="AtlasTexture" id="AtlasTexture_75fbh"]
+atlas = ExtResource("2_myay2")
+region = Rect2(99, 0, 76, 86)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d6mmk"]
-atlas = SubResource("CompressedTexture2D_gypp6")
-region = Rect2(15, 14, 77, 72)
+[sub_resource type="AtlasTexture" id="AtlasTexture_oj5s3"]
+atlas = ExtResource("2_myay2")
+region = Rect2(175, 0, 76, 86)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_x2haf"]
-atlas = SubResource("CompressedTexture2D_gypp6")
-region = Rect2(92, 14, 77, 72)
+[sub_resource type="AtlasTexture" id="AtlasTexture_urbwc"]
+atlas = ExtResource("2_myay2")
+region = Rect2(251, 0, 76, 86)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bingy"]
-atlas = SubResource("CompressedTexture2D_gypp6")
-region = Rect2(169, 14, 77, 72)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i1o3"]
+atlas = ExtResource("2_myay2")
+region = Rect2(327, 0, 76, 86)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6jvk6"]
-atlas = SubResource("CompressedTexture2D_gypp6")
-region = Rect2(246, 14, 77, 72)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tddjx"]
-atlas = SubResource("CompressedTexture2D_gypp6")
-region = Rect2(323, 14, 77, 72)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vydhm"]
-atlas = SubResource("CompressedTexture2D_gypp6")
-region = Rect2(400, 14, 77, 72)
+[sub_resource type="AtlasTexture" id="AtlasTexture_yu024"]
+atlas = ExtResource("2_myay2")
+region = Rect2(403, 0, 76, 86)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2i1te"]
 load_path = "res://.godot/imported/Run.png-fea69a4ac3aad92c368bf9d012a629a2.ctex"
@@ -144,25 +139,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("CompressedTexture2D_y6jlr")
+"texture": SubResource("AtlasTexture_rx6wk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_d6mmk")
+"texture": SubResource("AtlasTexture_75fbh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x2haf")
+"texture": SubResource("AtlasTexture_oj5s3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bingy")
+"texture": SubResource("AtlasTexture_urbwc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6jvk6")
+"texture": SubResource("AtlasTexture_5i1o3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tddjx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vydhm")
+"texture": SubResource("AtlasTexture_yu024")
 }],
 "loop": true,
 "name": &"jump",
@@ -210,10 +202,8 @@ script = ExtResource("1_1stpw")
 texture_filter = 1
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_6wmvf")
-animation = &"run"
+animation = &"jump"
 autoplay = "idle"
-frame = 6
-frame_progress = 1.0
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5625, 3.3125)
