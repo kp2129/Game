@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpkphu8qj137m"]
+[gd_scene load_steps=2 format=3 uid="uid://bpkphu8qj137m"]
 
 [ext_resource type="Texture2D" uid="uid://cysa04ywr7oi3" path="res://assets/img/background/plx-1.png" id="1_5v8qh"]
-[ext_resource type="Texture2D" path="res://assets/kenney_background-elements/Samples/colored_talltrees.png" id="3_bluoh"]
 
 [node name="Bg" type="ParallaxBackground"]
 
@@ -16,7 +15,6 @@ motion_mirroring = Vector2(1135, 2.08165e-12)
 [node name="ColoredTalltrees" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2(571, 218)
 scale = Vector2(1.11133, 1)
-texture = ExtResource("3_bluoh")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.8, 1)
