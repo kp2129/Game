@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c65cw8m63e11s"]
 
-[ext_resource type="Texture2D" uid="uid://caj8i6barrxrn" path="res://cave_rocks/cave_rock1.png" id="1_64k3o"]
+[ext_resource type="Texture2D" uid="uid://c2na8iq62xim6" path="res://assets/img/obstacles/barrel.png" id="1_4t56u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4q30l"]
 size = Vector2(108, 104)
@@ -9,9 +9,11 @@ size = Vector2(108, 104)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(7.15256e-06, 0.100003)
-scale = Vector2(0.603352, 0.789394)
-texture = ExtResource("1_64k3o")
+position = Vector2(3, 178)
+scale = Vector2(2, 2)
+texture = ExtResource("1_4t56u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 178)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_4q30l")

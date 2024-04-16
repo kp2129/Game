@@ -203,18 +203,24 @@ script = ExtResource("1_1stpw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(0.3, 0.3)
+position = Vector2(6.6, -12.65)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_6wmvf")
 animation = &"jump"
 autoplay = "idle"
+metadata/_edit_group_ = true
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5625, 3.3125)
+position = Vector2(6.038, -12.15)
+scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_whux2")
+metadata/_edit_group_ = true
 
 [node name="DuckCol" type="CollisionShape2D" parent="."]
-position = Vector2(-0.4375, 7.6875)
+position = Vector2(6.163, -8.15)
+scale = Vector2(0.8, 0.8)
 shape = SubResource("RectangleShape2D_t1b5m")
+metadata/_edit_group_ = true
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_60go1")
