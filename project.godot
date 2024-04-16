@@ -13,6 +13,7 @@ config_version=5
 config/name="dino_run_tut"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
 
 [display]
@@ -21,7 +22,6 @@ window/size/viewport_width=844
 window/size/viewport_height=390
 window/size/resizable=false
 window/size/borderless=true
-window/vsync/vsync_mode=0
 
 [rendering]
 
