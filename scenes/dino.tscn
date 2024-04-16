@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://scenes/dino.gd" id="1_1stpw"]
 [ext_resource type="AudioStream" uid="uid://dscpg6m666dta" path="res://assets/sound/jump.wav" id="2_60go1"]
-[ext_resource type="Texture2D" uid="uid://64elsk3sj6mx" path="res://Jump.png" id="2_myay2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pokef"]
 load_path = "res://.godot/imported/Attack 1.png-5a5f3fb343ab47937c9c4bba917270ad.ctex"
@@ -41,28 +40,30 @@ region = Rect2(70, 0, 70, 86)
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pxbop"]
 load_path = "res://.godot/imported/Idle.png-9e75c1538c93c9e356daa1134d4b4412.ctex"
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2nuki"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_rx6wk"]
-atlas = ExtResource("2_myay2")
+atlas = SubResource("CompressedTexture2D_2nuki")
 region = Rect2(23, 0, 76, 86)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_75fbh"]
-atlas = ExtResource("2_myay2")
+atlas = SubResource("CompressedTexture2D_2nuki")
 region = Rect2(99, 0, 76, 86)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oj5s3"]
-atlas = ExtResource("2_myay2")
+atlas = SubResource("CompressedTexture2D_2nuki")
 region = Rect2(175, 0, 76, 86)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_urbwc"]
-atlas = ExtResource("2_myay2")
+atlas = SubResource("CompressedTexture2D_2nuki")
 region = Rect2(251, 0, 76, 86)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5i1o3"]
-atlas = ExtResource("2_myay2")
+atlas = SubResource("CompressedTexture2D_2nuki")
 region = Rect2(327, 0, 76, 86)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yu024"]
-atlas = ExtResource("2_myay2")
+atlas = SubResource("CompressedTexture2D_2nuki")
 region = Rect2(403, 0, 76, 86)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2i1te"]

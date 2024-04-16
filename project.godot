@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="dino_run_tut"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,3 +22,11 @@ window/size/viewport_height=390
 window/size/resizable=false
 window/size/borderless=true
 window/vsync/vsync_mode=0
+
+[rendering]
+
+renderer/rendering_method="mobile"
+renderer/rendering_method.web="mobile"
+anti_aliasing/quality/msaa_2d=3
+anti_aliasing/quality/screen_space_aa=1
+anti_aliasing/quality/use_taa=true
