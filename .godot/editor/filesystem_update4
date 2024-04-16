@@ -1,5 +1,8 @@
+res://scenes/bird.gd
+res://scenes/barrel.tscn
+res://main_menu.gd
 res://scenes/main_menu.tscn
 res://scenes/main_menu.gd
 res://scenes/main.tscn
-res://scenes/barrel.tscn
-res://scenes/bg.tscn
+res://scenes/dino.gd
+res://scenes/main.gd
