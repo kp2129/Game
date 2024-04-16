@@ -205,9 +205,8 @@ script = ExtResource("1_1stpw")
 texture_filter = 1
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_6wmvf")
-animation = &"duck"
+animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.269011
 
 [node name="RunCol" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5625, 3.3125)

@@ -18,7 +18,7 @@ script = ExtResource("1_d36gk")
 position = Vector2(153, 489)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 324)
+position = Vector2(426, 445)
 
 [node name="HUD" parent="." instance=ExtResource("5_cgpie")]
 
