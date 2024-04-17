@@ -3,6 +3,10 @@ extends CharacterBody2D
 const GRAVITY : int = 4200
 const JUMP_SPEED : int = -1200
 
+func play_hurt_animation():
+	$AnimatedSprite2D.play("hurt")
+	
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	velocity.y += GRAVITY * delta
@@ -23,3 +27,5 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("jump")
 		
 	move_and_slide()
+
+
