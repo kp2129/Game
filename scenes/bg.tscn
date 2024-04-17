@@ -11,7 +11,7 @@ centered = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.6, 1)
-motion_mirroring = Vector2(1020, 2.08165e-12)
+motion_mirroring = Vector2(1023, 2.08165e-12)
 
 [node name="ColoredTalltrees" type="Sprite2D" parent="ParallaxLayer"]
 position = Vector2(515, 155)

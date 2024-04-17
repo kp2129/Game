@@ -31,7 +31,23 @@ func _ready():
 	screen_size = get_window().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
 	$GameOver.get_node("Button").pressed.connect(new_game)
+	$GameOver.get_node("quit").pressed.connect(main_menu)
 	new_game()
+	
+	
+func main_menu():
+	# Ensure input processing is reset
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)  
+	Input.set_default_cursor_shape(Input.CURSOR_ARROW)  
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)  
+	
+	# Ensure the game tree is not paused
+	get_tree().paused = false
+
+	# Change the scene to the main menu
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+
 
 func new_game():
 	#reset variables

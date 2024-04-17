@@ -7,5 +7,6 @@ res://scenes/stump.tscn
 res://scenes/rock.tscn
 res://scenes/bird.tscn
 res://scenes/bg.tscn
+res://scenes/game_over.tscn
+res://scenes/game_over.gd
 res://scenes/main.gd
-res://scenes/dino.gd
