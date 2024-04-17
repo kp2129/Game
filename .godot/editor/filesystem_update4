@@ -10,3 +10,4 @@ res://scenes/bg.tscn
 res://scenes/game_over.tscn
 res://scenes/game_over.gd
 res://scenes/main.gd
+res://scenes/login.tscn
