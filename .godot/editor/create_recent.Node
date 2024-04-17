@@ -1,3 +1,4 @@
+AudioStreamPlayer
 HTTPRequest
 Label
 Button
@@ -6,4 +7,3 @@ TextEdit
 VBoxContainer
 MarginContainer
 ColorRect
-AudioStreamPlayer

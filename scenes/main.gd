@@ -73,6 +73,8 @@ func new_game():
 	#reset hud and game over screen
 	$HUD.get_node("StartLabel").show()
 	$GameOver.hide()
+	await get_tree().create_timer(2.6).timeout
+	$StartBGSound.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -143,6 +145,7 @@ func remove_obs(obs):
 func hit_obs(body):
 	if body.name == "Dino":
 		game_over()
+		$StartDeathSound.play()
 
 func show_score():
 	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(score / SCORE_MODIFIER)
