@@ -81,5 +81,8 @@ offset_right = 452.0
 offset_bottom = 321.0
 text = "Already have an account?"
 
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="button_down" from="Login" to="." method="_on_login_button_down"]
 [connection signal="pressed" from="back2" to="." method="_on_back_2_pressed"]
 [connection signal="pressed" from="Login3" to="." method="_on_login_pressed"]
