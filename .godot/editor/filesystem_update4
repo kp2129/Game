@@ -11,3 +11,7 @@ res://scenes/game_over.tscn
 res://scenes/game_over.gd
 res://scenes/main.gd
 res://scenes/login.tscn
+res://scenes/main_menu.gd
+res://scenes/login.gd
+res://scenes/register.tscn
+res://scenes/register.gd

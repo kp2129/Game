@@ -1,10 +1,8 @@
-
-TextEdit
+Label
 Button
+LineEdit
+TextEdit
 VBoxContainer
 MarginContainer
-Label
 ColorRect
-
 AudioStreamPlayer
-

@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://dthey8a8gih4d"]
+
+[ext_resource type="Script" path="res://scenes/register.gd" id="1_kmbou"]
+[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="1_mh7l0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bthd8"]
+font = ExtResource("1_mh7l0")
+font_size = 62
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Register" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kmbou")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 844.0
+offset_bottom = 390.0
+color = Color(0.219608, 0.219608, 0.219608, 1)
+
+[node name="Login2" type="Label" parent="."]
+offset_top = 10.0
+offset_right = 844.0
+offset_bottom = 90.0
+text = "Create a profile"
+label_settings = SubResource("LabelSettings_bthd8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Username" type="LineEdit" parent="."]
+offset_left = 275.0
+offset_top = 107.0
+offset_right = 575.0
+offset_bottom = 138.0
+placeholder_text = "Enter your username"
+
+[node name="Password" type="LineEdit" parent="."]
+offset_left = 275.0
+offset_top = 151.0
+offset_right = 575.0
+offset_bottom = 182.0
+placeholder_text = "Enter your password"
+
+[node name="Password2" type="LineEdit" parent="."]
+offset_left = 275.0
+offset_top = 196.0
+offset_right = 575.0
+offset_bottom = 227.0
+placeholder_text = "Repeat your password"
+
+[node name="Login" type="Button" parent="."]
+offset_left = 301.0
+offset_top = 246.0
+offset_right = 551.0
+offset_bottom = 277.0
+text = "Create account"
+
+[node name="back2" type="Button" parent="."]
+offset_left = 27.0
+offset_top = 336.0
+offset_right = 127.0
+offset_bottom = 367.0
+text = "Back"
+
+[node name="Login3" type="Button" parent="."]
+offset_left = 457.0
+offset_top = 295.0
+offset_right = 573.0
+offset_bottom = 326.0
+text = "Login here!"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 255.0
+offset_top = 298.0
+offset_right = 452.0
+offset_bottom = 321.0
+text = "Already have an account?"
+
+[connection signal="pressed" from="back2" to="." method="_on_back_2_pressed"]
+[connection signal="pressed" from="Login3" to="." method="_on_login_pressed"]
