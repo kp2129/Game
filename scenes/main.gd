@@ -41,6 +41,8 @@ func new_game():
 	get_tree().paused = false
 	difficulty = 0
 	
+	$StartSound.play()
+	
 	#delete all obstacles
 	for obs in obstacles:
 		obs.queue_free()
@@ -143,4 +145,6 @@ func game_over():
 	check_high_score()
 	get_tree().paused = true
 	game_running = false
+	$Dino.play_hurt_animation()
+	await get_tree().create_timer(0.4).timeout
 	$GameOver.show()

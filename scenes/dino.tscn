@@ -198,6 +198,7 @@ size = Vector2(8.875, 10.375)
 
 [node name="Dino" type="CharacterBody2D"]
 z_index = 1
+position = Vector2(35, 0)
 scale = Vector2(8, 8)
 script = ExtResource("1_1stpw")
 
