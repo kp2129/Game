@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cu0wckqqxtnol"]
+[gd_scene load_steps=4 format=3 uid="uid://jnchfbyg22k1"]
 
 [ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="1_2dhwk"]
 [ext_resource type="Script" path="res://scenes/login.gd" id="1_km3l4"]

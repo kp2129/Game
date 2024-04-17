@@ -8,6 +8,7 @@ size = Vector2(3065.33, 97)
 [node name="Ground" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(2, 472)
 scale = Vector2(0.796441, 0.6)
 texture = ExtResource("1_achns")
