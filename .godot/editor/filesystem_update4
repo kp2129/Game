@@ -1,4 +1,11 @@
-res://scenes/main_menu.tscn
 res://scenes/main.tscn
-res://shop.tscn
-res://scenes/shop.tscn
+res://scenes/barrel.tscn
+res://scenes/main_menu.tscn
+res://scenes/ground.tscn
+res://scenes/dino.tscn
+res://scenes/stump.tscn
+res://scenes/rock.tscn
+res://scenes/bird.tscn
+res://scenes/bg.tscn
+res://scenes/login.tscn
+res://scenes/register.tscn
