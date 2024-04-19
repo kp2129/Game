@@ -1,6 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://lyf4a3sklk1o"]
+[gd_scene load_steps=6 format=3 uid="uid://lyf4a3sklk1o"]
 
 [ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="1_xwrdd"]
+[ext_resource type="FontFile" uid="uid://cbee8yk1on1qo" path="res://assets/fonts/KnightsQuest.ttf" id="2_nujoq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2scjb"]
+font = ExtResource("2_nujoq")
+font_size = 42
+
+[sub_resource type="LabelSettings" id="LabelSettings_vwjgd"]
+font = ExtResource("2_nujoq")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_wmsv7"]
+font = ExtResource("2_nujoq")
+font_size = 42
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -10,6 +23,7 @@ offset_bottom = 54.0
 theme_override_fonts/font = ExtResource("1_xwrdd")
 theme_override_font_sizes/font_size = 40
 text = "SCORE: "
+label_settings = SubResource("LabelSettings_2scjb")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -28,6 +42,7 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_xwrdd")
 theme_override_font_sizes/font_size = 40
 text = "PRESS SPACE TO PLAY"
+label_settings = SubResource("LabelSettings_vwjgd")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -41,5 +56,6 @@ grow_horizontal = 0
 theme_override_fonts/font = ExtResource("1_xwrdd")
 theme_override_font_sizes/font_size = 40
 text = "HIGH SCORE: "
+label_settings = SubResource("LabelSettings_wmsv7")
 horizontal_alignment = 1
 vertical_alignment = 1

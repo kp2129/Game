@@ -20,8 +20,6 @@ func _on_back_2_pressed():
 func _on_login_pressed():
 	get_tree().change_scene_to_file("res://scenes/login.tscn")
 
-
-
 func _on_login_button_down():
 	if !created:
 		username = $Username.text

@@ -206,6 +206,5 @@ offset_bottom = 323.0
 text = "Don't have an account?"
 label_settings = SubResource("LabelSettings_sph0p")
 
-[connection signal="pressed" from="Login" to="." method="_on_login_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Register" to="." method="_on_register_pressed"]

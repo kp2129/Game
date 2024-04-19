@@ -14,7 +14,7 @@ motion_scale = Vector2(0.6, 1)
 motion_mirroring = Vector2(960, 0)
 
 [node name="ColoredTalltrees" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(480, 380)
+position = Vector2(480, 395)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_k0xap")
 

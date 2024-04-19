@@ -1,16 +1,25 @@
-[gd_scene load_steps=6 format=3 uid="uid://lotwuige1aee"]
+[gd_scene load_steps=9 format=3 uid="uid://lotwuige1aee"]
 
 [ext_resource type="Script" path="res://scenes/game_over.gd" id="1_7gwp0"]
-[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://assets/fonts/retro.ttf" id="1_ykggm"]
+[ext_resource type="FontFile" uid="uid://cbee8yk1on1qo" path="res://assets/fonts/KnightsQuest.ttf" id="2_ntjh2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1lj6"]
-bg_color = Color(1, 0, 0.12549, 1)
+bg_color = Color(0.298039, 0, 0.0117647, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2c4s"]
-bg_color = Color(0, 0.682353, 0.713726, 1)
+bg_color = Color(0.364706, 0.0862745, 0.121569, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wtbp"]
 bg_color = Color(0.6, 0.52549, 0.937255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ot3v"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epmpt"]
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jet68"]
+bg_color = Color(0.239216, 0.239216, 0.239216, 1)
 
 [node name="GameOver" type="CanvasLayer"]
 script = ExtResource("1_7gwp0")
@@ -27,16 +36,21 @@ offset_right = 125.0
 offset_bottom = 27.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_ykggm")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("2_ntjh2")
+theme_override_font_sizes/font_size = 48
 theme_override_styles/normal = SubResource("StyleBoxFlat_h1lj6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_x2c4s")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7wtbp")
 text = "RESTART"
 
 [node name="quit" type="Button" parent="."]
-offset_left = 298.0
+offset_left = 252.0
 offset_top = 243.0
-offset_right = 548.0
-offset_bottom = 291.0
+offset_right = 601.0
+offset_bottom = 300.0
+theme_override_fonts/font = ExtResource("2_ntjh2")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_7ot3v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_epmpt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jet68")
 text = "Back to main menu"
