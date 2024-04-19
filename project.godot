@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="dino_run_tut"
+config/name="(k)night_runner"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 run/max_fps=60
