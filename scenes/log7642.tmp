@@ -211,4 +211,3 @@ label_settings = SubResource("LabelSettings_sph0p")
 [connection signal="pressed" from="Login" to="." method="_on_login_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Register" to="." method="_on_register_pressed"]
-[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
