@@ -2,8 +2,5 @@ res://scenes/main.tscn
 res://scenes/barrel.tscn
 res://scenes/login.tscn
 res://scenes/register.tscn
+res://scenes/register.gd
 res://scenes/login.gd
-res://scenes/main_menu.tscn
-res://scenes/shop.tscn
-
-

@@ -9,10 +9,10 @@ func _on_back_pressed():
 	get_tree().paused = false
 
 	# Change the scene to the main menu
-	get_tree().change_scene("res://scenes/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _on_register_pressed():
-	get_tree().change_scene("res://scenes/register.tscn")
+	get_tree().change_scene_to_file("res://scenes/register.tscn")
 
 func _on_login_pressed():
 	$HTTPRequest.request_completed.connect(_on_http_request_request_completed)
