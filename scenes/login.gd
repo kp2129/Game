@@ -1,7 +1,10 @@
 extends Control
 
+
 var user_token = ""
 var username = ""
+
+var http_request
 
 func _on_back_pressed():
 	# Ensure input processing is reset
@@ -12,17 +15,16 @@ func _on_back_pressed():
 	get_tree().paused = false
 
 	# Change the scene to the main menu
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	get_tree().change_scene("res://scenes/main_menu.tscn")
 
 func _on_register_pressed():
-	get_tree().change_scene_to_file("res://scenes/register.tscn")
+	get_tree().change_scene("res://scenes/register.tscn")
 
 func _on_login_pressed():
-	$HTTPRequest.request_completed.connect(_on_http_request_request_completed)
 	var headers = ["Content-Type: application/json"]
 	var username = $Username.text
 	var password = $Password.text
-	var url = "http://localhost/rgame/backend/login.php"
+	var url = "http://localhost:8000/login"
 	var body = {"username": username, "password": password}
 	body = JSON.stringify(body)
 	$HTTPRequest.request(url, headers, HTTPClient.METHOD_POST, body)
@@ -38,3 +40,4 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 	else:
 		print("Login failed")
 		$ErrorLabel.text = json["error"]
+
