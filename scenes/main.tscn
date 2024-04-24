@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://lyf4a3sklk1o" path="res://scenes/hud.tscn" id="5_cgpie"]
 [ext_resource type="PackedScene" uid="uid://lotwuige1aee" path="res://scenes/game_over.tscn" id="6_6n2u1"]
 [ext_resource type="AudioStream" uid="uid://dl86o7y0skb5v" path="res://assets/sound/knight_spawn.mp3" id="7_uuu61"]
-[ext_resource type="PackedScene" uid="uid://0gdbcrphnj10" path="res://scenes/coin.tscn" id="8_d73w4"]
+[ext_resource type="PackedScene" path="res://scenes/coin.tscn" id="8_d73w4"]
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="9_spd8y"]
 
 [node name="Main" type="Node"]

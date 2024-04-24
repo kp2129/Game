@@ -28,3 +28,13 @@ func _on_login_button_down():
 		print("Account created successfully!")
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 		
+
+func _on_http_request_request_completed(result, response_code, headers, body):
+	var json = JSON.parse_string(body.get_string_from_utf8())
+	print(json)
+	print(result)
+	print(response_code)
+	if response_code == 201:
+		get_tree().change_scene_to_file("res://scenes/login.tscn")
+
+

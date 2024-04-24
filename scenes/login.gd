@@ -1,9 +1,10 @@
 extends Control
 
-var http_request
 
-func _ready():
-	http_request = $HTTPRequest
+var user_token = ""
+var username = ""
+
+var http_request
 
 func _on_back_pressed():
 	# Ensure input processing is reset
@@ -26,6 +27,17 @@ func _on_login_pressed():
 	var url = "http://localhost:8000/login"
 	var body = {"username": username, "password": password}
 	body = JSON.stringify(body)
-	var error = http_request.request(url, headers, true, HTTPClient.METHOD_POST, body)
-	if error != OK:
-		push_error("An error occurred in the HTTP request")
+	$HTTPRequest.request(url, headers, HTTPClient.METHOD_POST, body)
+
+func _on_http_request_request_completed(result, response_code, headers, body):
+	var json = JSON.parse_string(body.get_string_from_utf8())
+	if response_code == 200:
+		print("Login successful")
+		user_token = json["token"]
+		TokenManager.instance.user_token = json["token"]
+		username = json["data"]["username"]
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	else:
+		print("Login failed")
+		$ErrorLabel.text = json["error"]
+
