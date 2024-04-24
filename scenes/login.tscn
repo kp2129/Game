@@ -200,7 +200,6 @@ offset_bottom = 323.0
 text = "Don't have an account?"
 label_settings = SubResource("LabelSettings_sph0p")
 
-
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
 [node name="ErrorLabel" type="Label" parent="."]
@@ -214,5 +213,3 @@ offset_bottom = 50.5
 grow_horizontal = 2
 grow_vertical = 2
 horizontal_alignment = 1
-
-
