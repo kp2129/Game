@@ -2,6 +2,5 @@ res://scenes/main.tscn
 res://scenes/barrel.tscn
 res://scenes/login.tscn
 res://scenes/register.tscn
-res://scenes/register.gd
 res://scenes/login.gd
-res://TokenManager.gd
+res://scenes/register.gd
