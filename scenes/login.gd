@@ -3,6 +3,7 @@ extends Control
 
 var user_token = ""
 var username = ""
+var user_id = ""
 
 var http_request
 
@@ -34,8 +35,12 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 	if response_code == 200:
 		print("Login successful")
 		user_token = json["token"]
-		TokenManager.instance.user_token = json["token"]
+		#user_id = json["data"]["id"]
 		username = json["data"]["username"]
+		UserManager.instance.user_token = user_token
+		#UserManager.instance.user_id = json["token"]
+		UserManager.instance.username = username
+		
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 	else:
 		print("Login failed")

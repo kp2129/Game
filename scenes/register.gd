@@ -37,5 +37,6 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 	print(response_code)
 	if response_code == 201:
 		get_tree().change_scene_to_file("res://scenes/login.tscn")
-
+	else:
+		$ErrorLabel.text = json["error"]
 

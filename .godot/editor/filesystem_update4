@@ -4,3 +4,4 @@ res://scenes/login.tscn
 res://scenes/register.tscn
 res://scenes/login.gd
 res://scenes/register.gd
+res://scenes/TokenManager.gd
