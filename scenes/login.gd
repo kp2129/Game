@@ -1,5 +1,8 @@
 extends Control
 
+var user_token = ""
+var username = ""
+
 func _on_back_pressed():
 	# Ensure input processing is reset
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -26,5 +29,12 @@ func _on_login_pressed():
 
 func _on_http_request_request_completed(result, response_code, headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
-	print(json)
-
+	if response_code == 200:
+		print("Login successful")
+		user_token = json["token"]
+		TokenManager.instance.user_token = json["token"]
+		username = json["data"]["username"]
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	else:
+		print("Login failed")
+		$ErrorLabel.text = json["error"]
