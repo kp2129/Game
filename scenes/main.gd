@@ -1,5 +1,7 @@
 extends Node
 
+@onready var game_manager = %GameManager
+
 #preload obstacles
 var stump_scene = preload("res://scenes/stump.tscn")
 var rock_scene = preload("res://scenes/rock.tscn")
@@ -25,6 +27,7 @@ var screen_size : Vector2i
 var ground_height : int
 var game_running : bool
 var last_obs
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -93,6 +96,7 @@ func _process(delta):
 		#update score
 		score += speed
 		show_score()
+		show_coins()
 		
 		#update ground position
 		if $Camera2D.position.x - $Ground.position.x > screen_size.x * 1.5:
@@ -108,27 +112,27 @@ func _process(delta):
 			$HUD.get_node("StartLabel").hide()
 
 func generate_obs():
-	#generate ground obstacles
 	if obstacles.is_empty() or last_obs.position.x < score + randi_range(300, 500):
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
 		var obs
 		var max_obs = difficulty + 1
 		for i in range(randi() % max_obs + 1):
-			obs = obs_type.instantiate()
+			obs = obs_type.instantiate() 
 			var obs_height = obs.get_node("Sprite2D").texture.get_height()
 			var obs_scale = obs.get_node("Sprite2D").scale
 			var obs_x : int = screen_size.x + score + 100 + (i * 100)
 			var obs_y : int = screen_size.y - ground_height - (obs_height * obs_scale.y / 2) + 5
 			last_obs = obs
 			add_obs(obs, obs_x, obs_y)
-		#additionally random chance to spawn a bird
+		
+		# Additionally random chance to spawn a bird
 		if difficulty == MAX_DIFFICULTY:
 			if (randi() % 2) == 0:
-				#generate bird obstacles
 				obs = bird_scene.instantiate()
 				var obs_x : int = screen_size.x + score + 100
 				var obs_y : int = bird_heights[randi() % bird_heights.size()]
 				add_obs(obs, obs_x, obs_y)
+			
 
 func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
@@ -146,6 +150,9 @@ func hit_obs(body):
 
 func show_score():
 	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(score / SCORE_MODIFIER)
+	
+func show_coins():
+	$HUD.get_node("CoinsLabel").text = "Coins: " + str(game_manager.points)
 
 func check_high_score():
 	if score > high_score:
