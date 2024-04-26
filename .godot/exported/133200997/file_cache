@@ -1,0 +1,15 @@
+res://scenes/barrel.tscn::92269099acd6c514f5b4916103a044ca::1713952711::res://.godot/exported/133200997/export-bacd544be2ffe35e40b6d32eeb23097c-barrel.scn
+res://scenes/bg.tscn::586dd10393ede231b9d1c37e9a1e3109::1713951546::res://.godot/exported/133200997/export-81131b8fc689928ee1fd3db9d053cb56-bg.scn
+res://scenes/bird.tscn::5f8147f2b3f2c676e1872c613bd7adf5::1713951546::res://.godot/exported/133200997/export-15556b2ffd9f6ec7212a192ec05dd064-bird.scn
+res://scenes/coin.tscn::ac07f68b231b996c19763c9cfb7096f5::1713951546::res://.godot/exported/133200997/export-96b2131180b71dd158e52c5527d22dd4-coin.scn
+res://scenes/dino.tscn::88e4c57b9a0d5df6853dcc164c1991bc::1713951546::res://.godot/exported/133200997/export-c5878a53e86263b17ab4b139a878d4e2-dino.scn
+res://scenes/game_over.tscn::3cccae0f9afddcfae3e2d8b0e8d9f54c::1713951546::res://.godot/exported/133200997/export-21b8bee24a2bf9e9929bc898cc82b612-game_over.scn
+res://scenes/ground.tscn::bb59aaa20eab238cd0d8b6f4ce1adf88::1713951546::res://.godot/exported/133200997/export-dfd9c84b87282d43ebad4fab1fa15f6a-ground.scn
+res://scenes/hud.tscn::58189a6a683b97867d9208e68cb0663c::1713951546::res://.godot/exported/133200997/export-38bf74ff262409a94a41206b2b776d33-hud.scn
+res://scenes/login.tscn::4487f87fedc64e7dbdebae9410e53cc6::1713952711::res://.godot/exported/133200997/export-93c320c56772bd8b351ad1821ca512aa-login.scn
+res://scenes/main.tscn::9b3ba405b0ed4d1a46155de30941763f::1713952711::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+res://scenes/main_menu.tscn::8a379782adad6cac656a0d629eff4c1e::1713951546::res://.godot/exported/133200997/export-ea5c6ad4629af728dc514cefde332394-main_menu.scn
+res://scenes/register.tscn::702a404d76ebacad17794ee2635124b5::1713952711::res://.godot/exported/133200997/export-46e8ca77100e4f808477884363d44982-register.scn
+res://scenes/rock.tscn::e25b56ee8285c7af825c69ff009b437e::1713951546::res://.godot/exported/133200997/export-4d17f6ae760ddb66d5f85163ed872cf5-rock.scn
+res://scenes/shop.tscn::fab3f8d23e760dacb6b47df9b114196c::1713951546::res://.godot/exported/133200997/export-4b603ba22abe1ca4e7b53e2c2e7d249e-shop.scn
+res://scenes/stump.tscn::4844bf82c37475fff585cac25b98d036::1713951546::res://.godot/exported/133200997/export-730dfa365d5299fa62cc271f6f2bb88e-stump.scn

@@ -1,7 +1,8 @@
-res://scenes/main.tscn
 res://scenes/barrel.tscn
-res://scenes/login.tscn
-res://scenes/register.tscn
-res://scenes/login.gd
-res://scenes/register.gd
-res://scenes/TokenManager.gd
+res://scenes/rock.tscn
+res://scenes/main.tscn
+res://scenes/stump.tscn
+res://scenes/shop.tscn
+res://scenes/ground.tscn
+res://scenes/dino.gd
+res://scenes/main.gd

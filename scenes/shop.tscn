@@ -24,6 +24,7 @@ offset_bottom = 390.0
 color = Color(0.160784, 0.160784, 0.160784, 1)
 
 [node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
 offset_right = 844.0
 offset_bottom = 100.0
 text = "Shop"
