@@ -9,19 +9,19 @@ var barrel_scene = preload("res://scenes/barrel.tscn")
 var bird_scene = preload("res://scenes/bird.tscn")
 var obstacle_types := [stump_scene, rock_scene, barrel_scene]
 var obstacles : Array
-var bird_heights := [200, 390]
+var bird_heights := [300, 390]
 
 #game variables
 const DINO_START_POS := Vector2i(150, 485)
 const CAM_START_POS := Vector2i(576, 324)
 var difficulty
-const MAX_DIFFICULTY : int = 2
+const MAX_DIFFICULTY : int = 4
 var score : int
 const SCORE_MODIFIER : int = 10
 var high_score : int
 var speed : float
-const START_SPEED : float = 10.0
-const MAX_SPEED : int = 25
+const START_SPEED : float = 15.0
+const MAX_SPEED : int = 35
 const SPEED_MODIFIER : int = 5000
 var screen_size : Vector2i
 var ground_height : int
