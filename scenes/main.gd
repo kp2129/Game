@@ -9,7 +9,7 @@ var barrel_scene = preload("res://scenes/barrel.tscn")
 var bird_scene = preload("res://scenes/bird.tscn")
 var obstacle_types := [stump_scene, rock_scene, barrel_scene]
 var obstacles : Array
-var bird_heights := [300, 390]
+var bird_heights := [200, 15  0]
 
 #game variables
 const DINO_START_POS := Vector2i(150, 485)
@@ -165,9 +165,31 @@ func adjust_difficulty():
 		difficulty = MAX_DIFFICULTY
 
 func game_over():
-	check_high_score()
-	get_tree().paused = true
-	game_running = false
-	$Dino.play_hurt_animation()
-	await get_tree().create_timer(0.4).timeout
-	$GameOver.show()
+	var headers = ["Content-Type: application/json"]
+	var url = "http://localhost/rgame/backend/history.php"
+	var body = {"score": score , "token":UserManager.instance.user_token}
+	body = JSON.stringify(body)
+	print(UserManager.instance.user_token)
+	$HTTPRequest.request(url, headers, HTTPClient.METHOD_POST, body)
+ 
+
+func _on_http_request_request_completed(result, response_code, headers, body):
+	var json = JSON.parse_string(body.get_string_from_utf8())
+	print(json)
+	print(response_code)
+	if response_code == 201:
+		check_high_score()
+		get_tree().paused = true
+		game_running = false
+		$Dino.play_hurt_animation()
+		await get_tree().create_timer(0.4).timeout
+		$GameOver.show()
+	else:
+		print("bad?")
+		check_high_score()
+		get_tree().paused = true
+		game_running = false
+		$Dino.play_hurt_animation()
+		await get_tree().create_timer(0.4).timeout
+		$GameOver.show()
+
