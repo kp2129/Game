@@ -22,6 +22,7 @@ func _on_register_pressed():
 	get_tree().change_scene_to_file("res://scenes/register.tscn")
 
 func _on_login_pressed():
+	$HTTPRequest.request_completed.connect(_on_http_request_request_completed)
 	var headers = ["Content-Type: application/json"]
 	var username = $Username.text
 	var password = $Password.text
@@ -32,6 +33,7 @@ func _on_login_pressed():
 
 func _on_http_request_request_completed(result, response_code, headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
+	print(json)
 	if response_code == 200:
 		print("Login successful")
 		user_token = json["token"]

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const GRAVITY : int = 3900
-const JUMP_SPEED : int = -1400
+const JUMP_SPEED : int = -1200
 
 func play_hurt_animation():
 	$AnimatedSprite2D.play("hurt")
