@@ -1,5 +1,7 @@
 extends Node
 
+@onready var game_manager = %GameManager
+
 #preload obstacles
 var stump_scene = preload("res://scenes/stump.tscn")
 var rock_scene = preload("res://scenes/rock.tscn")
@@ -7,24 +9,25 @@ var barrel_scene = preload("res://scenes/barrel.tscn")
 var bird_scene = preload("res://scenes/bird.tscn")
 var obstacle_types := [stump_scene, rock_scene, barrel_scene]
 var obstacles : Array
-var bird_heights := [200, 390]
+var bird_heights := [200, 15  0]
 
 #game variables
 const DINO_START_POS := Vector2i(150, 485)
 const CAM_START_POS := Vector2i(576, 324)
 var difficulty
-const MAX_DIFFICULTY : int = 2
+const MAX_DIFFICULTY : int = 4
 var score : int
 const SCORE_MODIFIER : int = 10
 var high_score : int
 var speed : float
-const START_SPEED : float = 10.0
-const MAX_SPEED : int = 25
+const START_SPEED : float = 15.0
+const MAX_SPEED : int = 35
 const SPEED_MODIFIER : int = 5000
 var screen_size : Vector2i
 var ground_height : int
 var game_running : bool
 var last_obs
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -93,6 +96,7 @@ func _process(delta):
 		#update score
 		score += speed
 		show_score()
+		show_coins()
 		
 		#update ground position
 		if $Camera2D.position.x - $Ground.position.x > screen_size.x * 1.5:
@@ -108,27 +112,27 @@ func _process(delta):
 			$HUD.get_node("StartLabel").hide()
 
 func generate_obs():
-	#generate ground obstacles
 	if obstacles.is_empty() or last_obs.position.x < score + randi_range(300, 500):
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
 		var obs
 		var max_obs = difficulty + 1
 		for i in range(randi() % max_obs + 1):
-			obs = obs_type.instantiate()
+			obs = obs_type.instantiate() 
 			var obs_height = obs.get_node("Sprite2D").texture.get_height()
 			var obs_scale = obs.get_node("Sprite2D").scale
 			var obs_x : int = screen_size.x + score + 100 + (i * 100)
 			var obs_y : int = screen_size.y - ground_height - (obs_height * obs_scale.y / 2) + 5
 			last_obs = obs
 			add_obs(obs, obs_x, obs_y)
-		#additionally random chance to spawn a bird
+		
+		# Additionally random chance to spawn a bird
 		if difficulty == MAX_DIFFICULTY:
 			if (randi() % 2) == 0:
-				#generate bird obstacles
 				obs = bird_scene.instantiate()
 				var obs_x : int = screen_size.x + score + 100
 				var obs_y : int = bird_heights[randi() % bird_heights.size()]
 				add_obs(obs, obs_x, obs_y)
+			
 
 func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
@@ -146,6 +150,9 @@ func hit_obs(body):
 
 func show_score():
 	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(score / SCORE_MODIFIER)
+	
+func show_coins():
+	$HUD.get_node("CoinsLabel").text = "Coins: " + str(game_manager.points)
 
 func check_high_score():
 	if score > high_score:
@@ -158,9 +165,31 @@ func adjust_difficulty():
 		difficulty = MAX_DIFFICULTY
 
 func game_over():
-	check_high_score()
-	get_tree().paused = true
-	game_running = false
-	$Dino.play_hurt_animation()
-	await get_tree().create_timer(0.4).timeout
-	$GameOver.show()
+	var headers = ["Content-Type: application/json"]
+	var url = "http://localhost/rgame/backend/history.php"
+	var body = {"score": score , "token":UserManager.instance.user_token}
+	body = JSON.stringify(body)
+	print(UserManager.instance.user_token)
+	$HTTPRequest.request(url, headers, HTTPClient.METHOD_POST, body)
+ 
+
+func _on_http_request_request_completed(result, response_code, headers, body):
+	var json = JSON.parse_string(body.get_string_from_utf8())
+	print(json)
+	print(response_code)
+	if response_code == 201:
+		check_high_score()
+		get_tree().paused = true
+		game_running = false
+		$Dino.play_hurt_animation()
+		await get_tree().create_timer(0.4).timeout
+		$GameOver.show()
+	else:
+		print("bad?")
+		check_high_score()
+		get_tree().paused = true
+		game_running = false
+		$Dino.play_hurt_animation()
+		await get_tree().create_timer(0.4).timeout
+		$GameOver.show()
+

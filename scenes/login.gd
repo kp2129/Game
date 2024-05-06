@@ -1,5 +1,12 @@
 extends Control
 
+
+var user_token = ""
+var username = ""
+var user_id = ""
+
+var http_request
+
 func _on_back_pressed():
 	# Ensure input processing is reset
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -9,13 +16,12 @@ func _on_back_pressed():
 	get_tree().paused = false
 
 	# Change the scene to the main menu
-	get_tree().change_scene("res://scenes/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _on_register_pressed():
-	get_tree().change_scene("res://scenes/register.tscn")
+	get_tree().change_scene_to_file("res://scenes/register.tscn")
 
 func _on_login_pressed():
-	$HTTPRequest.request_completed.connect(_on_http_request_request_completed)
 	var headers = ["Content-Type: application/json"]
 	var username = $Username.text
 	var password = $Password.text
@@ -26,5 +32,17 @@ func _on_login_pressed():
 
 func _on_http_request_request_completed(result, response_code, headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
-	print(json)
+	if response_code == 200:
+		print("Login successful")
+		user_token = json["token"]
+		#user_id = json["data"]["id"]
+		username = json["data"]["username"]
+		UserManager.instance.user_token = user_token
+		#UserManager.instance.user_id = json["token"]
+		UserManager.instance.username = username
+		
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	else:
+		print("Login failed")
+		$ErrorLabel.text = json["error"]
 

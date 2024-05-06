@@ -1,0 +1,220 @@
+[gd_scene load_steps=15 format=3 uid="uid://jnchfbyg22k1"]
+
+[ext_resource type="Script" path="res://scenes/login.gd" id="1_km3l4"]
+[ext_resource type="Texture2D" uid="uid://dao31u1ixkxba" path="res://assets/img/6dles8r4h9y51.png" id="2_lyrc8"]
+[ext_resource type="FontFile" uid="uid://cbee8yk1on1qo" path="res://assets/fonts/KnightsQuest.ttf" id="3_sikqq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_go1ik"]
+font = ExtResource("3_sikqq")
+font_size = 82
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kcuof"]
+bg_color = Color(0.105882, 0.105882, 0.105882, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5q4l"]
+bg_color = Color(0.105882, 0.105882, 0.105882, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_478sp"]
+bg_color = Color(0.294118, 0.054902, 0.0745098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3cyn"]
+bg_color = Color(0.435294, 0.0352941, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5rxh"]
+bg_color = Color(0.494118, 0.0470588, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ug0id"]
+bg_color = Color(0.294118, 0.054902, 0.0745098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dyl4"]
+bg_color = Color(0.435294, 0.0352941, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xt5uu"]
+bg_color = Color(0.494118, 0.0470588, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5dq4h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sph0p"]
+font = ExtResource("3_sikqq")
+font_size = 22
+
+[node name="Login" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_km3l4")
+
+[node name="6Dles8r4h9y51" type="Sprite2D" parent="."]
+position = Vector2(425, 195)
+scale = Vector2(0.26375, 0.214444)
+texture = ExtResource("2_lyrc8")
+
+[node name="Login2" type="Label" parent="."]
+layout_mode = 2
+offset_top = 10.0
+offset_right = 844.0
+offset_bottom = 90.0
+text = "Login to continue"
+label_settings = SubResource("LabelSettings_go1ik")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Username" type="LineEdit" parent="."]
+layout_mode = 2
+offset_left = 275.0
+offset_top = 143.0
+offset_right = 575.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("3_sikqq")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_kcuof")
+placeholder_text = "Enter your username"
+alignment = 1
+
+[node name="Password" type="LineEdit" parent="."]
+layout_mode = 2
+offset_left = 275.0
+offset_top = 190.0
+offset_right = 575.0
+offset_bottom = 221.0
+theme_override_fonts/font = ExtResource("3_sikqq")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_i5q4l")
+placeholder_text = "Enter your password"
+alignment = 1
+
+[node name="Login" type="Button" parent="."]
+layout_mode = 2
+offset_left = 297.0
+offset_top = 246.0
+offset_right = 547.0
+offset_bottom = 277.0
+theme_override_fonts/font = ExtResource("3_sikqq")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_478sp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l3cyn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u5rxh")
+text = "Login"
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 336.0
+offset_right = 127.0
+offset_bottom = 367.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_ug0id")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3dyl4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xt5uu")
+text = "Back"
+
+[node name="Register" type="Button" parent="."]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 296.0
+offset_right = 586.0
+offset_bottom = 327.0
+theme_override_colors/font_color = Color(0.909804, 0, 0.12549, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("3_sikqq")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5dq4h")
+text = "Register here!"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 300.0
+offset_right = 461.0
+offset_bottom = 323.0
+text = "Don't have an account?"
+label_settings = SubResource("LabelSettings_sph0p")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="ErrorLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 27.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Register" to="." method="_on_register_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

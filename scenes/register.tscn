@@ -132,6 +132,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Username2" type="LineEdit" parent="."]
+layout_mode = 0
 offset_left = 276.0
 offset_top = 108.0
 offset_right = 576.0
@@ -143,6 +144,7 @@ placeholder_text = "Enter your username"
 alignment = 1
 
 [node name="Password3" type="LineEdit" parent="."]
+layout_mode = 0
 offset_left = 277.0
 offset_top = 151.0
 offset_right = 577.0
@@ -154,6 +156,7 @@ placeholder_text = "Enter your password"
 alignment = 1
 
 [node name="Password4" type="LineEdit" parent="."]
+layout_mode = 0
 offset_left = 277.0
 offset_top = 196.0
 offset_right = 577.0
@@ -212,6 +215,19 @@ label_settings = SubResource("LabelSettings_trvcd")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
+[node name="ErrorLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 27.5
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
 [connection signal="button_down" from="Login" to="." method="_on_login_button_down"]
 [connection signal="pressed" from="back2" to="." method="_on_back_2_pressed"]
 [connection signal="pressed" from="Login3" to="." method="_on_login_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
