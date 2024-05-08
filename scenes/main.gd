@@ -9,7 +9,9 @@ var barrel_scene = preload("res://scenes/barrel.tscn")
 var bird_scene = preload("res://scenes/bird.tscn")
 var obstacle_types := [stump_scene, rock_scene, barrel_scene]
 var obstacles : Array
+
 var bird_heights := [200, 15  , 0]
+
 
 #game variables
 const DINO_START_POS := Vector2i(150, 485)
@@ -20,9 +22,9 @@ var score : int
 const SCORE_MODIFIER : int = 10
 var high_score : int
 var speed : float
-const START_SPEED : float = 15.0
+const START_SPEED : float = 10.0
 const MAX_SPEED : int = 35
-const SPEED_MODIFIER : int = 5000
+const SPEED_MODIFIER : int = 4000
 var screen_size : Vector2i
 var ground_height : int
 var game_running : bool
@@ -165,6 +167,12 @@ func adjust_difficulty():
 		difficulty = MAX_DIFFICULTY
 
 func game_over():
+	check_high_score()
+	get_tree().paused = true
+	game_running = false
+	$Dino.play_hurt_animation()
+	await get_tree().create_timer(0.4).timeout
+	$GameOver.show()
 	var headers = ["Content-Type: application/json"]
 	var url = "http://localhost/rgame/backend/history.php"
 	var body = {"score": score / SCORE_MODIFIER , "token":UserManager.instance.user_token}

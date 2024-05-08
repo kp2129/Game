@@ -1,10 +1,13 @@
 HTTPRequest
 CollisionShape2D
 Label
+Sprite2D
+MarginContainer
+Window
+HTTPRequest
 Button
 LineEdit
 TextEdit
 VBoxContainer
-MarginContainer
 ColorRect
 AudioStreamPlayer
