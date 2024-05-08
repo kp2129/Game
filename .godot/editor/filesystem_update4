@@ -11,6 +11,7 @@ res://scenes/dino.tscn
 res://scenes/coin.tscn
 res://scenes/bg.tscn
 res://scenes/main.gd
-res://scenes/register.gd
 res://scenes/login.gd
-res://scenes/dino.gd
+res://scenes/register.gd
+
+
