@@ -181,6 +181,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_cd4ev")
 text = "Create account"
 
 [node name="back2" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 27.0
 offset_top = 336.0

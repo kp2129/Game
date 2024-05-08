@@ -9,7 +9,7 @@ var barrel_scene = preload("res://scenes/barrel.tscn")
 var bird_scene = preload("res://scenes/bird.tscn")
 var obstacle_types := [stump_scene, rock_scene, barrel_scene]
 var obstacles : Array
-var bird_heights := [200, 15  0]
+var bird_heights := [200, 15  , 0]
 
 #game variables
 const DINO_START_POS := Vector2i(150, 485)
@@ -167,7 +167,7 @@ func adjust_difficulty():
 func game_over():
 	var headers = ["Content-Type: application/json"]
 	var url = "http://localhost/rgame/backend/history.php"
-	var body = {"score": score , "token":UserManager.instance.user_token}
+	var body = {"score": score / SCORE_MODIFIER , "token":UserManager.instance.user_token}
 	body = JSON.stringify(body)
 	print(UserManager.instance.user_token)
 	$HTTPRequest.request(url, headers, HTTPClient.METHOD_POST, body)
