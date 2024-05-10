@@ -20,13 +20,7 @@ func _on_login_pressed():
 	get_tree().change_scene_to_file("res://scenes/login.tscn")
 
 func _on_login_button_down():
-	if !created:
-		username = $Username.text
-		password = $Password.text.sha256_text()
-		created = true 
-		print("Account created successfully!")
-		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
-		
+
 	var headers = ["Content-Type: application/json"]
 	var username = $Username2.text
 	var password = $Password3.text
@@ -34,7 +28,6 @@ func _on_login_button_down():
 	var url = "http://localhost/rgame/backend/register.php"
 	var body = {"username": username, "password": password, "rpassword" : rpassword}
 	body = JSON.stringify(body)
-	# Set a timeout for the HTTP request (in seconds)
 	$HTTPRequest.timeout = 10
 	$HTTPRequest.request(url, headers, HTTPClient.METHOD_POST, body)
 
@@ -52,3 +45,7 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 		# Handle errors, such as connection timeout or server not reachable
 		print("HTTP request failed:", result)
 		$ErrorLabel.text = "Error: Server unreachable"
+
+
+func _on_back_pressed():
+	get_tree().quit()

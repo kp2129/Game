@@ -3,6 +3,7 @@ extends Control
 var user_token = ""
 var username = ""
 var user_id = ""
+var coins = ""
 
 var http_request
 
@@ -40,8 +41,10 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 			print("Login successful")
 			user_token = json["token"]
 			username = json["data"]["username"]
+			coins = json["data"]["coins"]
 			UserManager.instance.user_token = user_token
 			UserManager.instance.username = username
+			UserManager.instance.coins = coins
 			get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 		else:
 			var json = JSON.parse_string(body.get_string_from_utf8())
@@ -52,3 +55,7 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 		# Handle errors, such as connection timeout or server not reachable
 		print("HTTP request failed:", result)
 		$ErrorLabel.text = "Error: Server unreachable"
+
+
+func _on_exit_pressed():
+	get_tree().quit()

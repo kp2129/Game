@@ -175,7 +175,7 @@ func game_over():
 	$GameOver.show()
 	var headers = ["Content-Type: application/json"]
 	var url = "http://localhost/rgame/backend/history.php"
-	var body = {"score": score / SCORE_MODIFIER , "token":UserManager.instance.user_token}
+	var body = {"score": score / SCORE_MODIFIER , "token":UserManager.instance.user_token , "coins":game_manager.points}
 	body = JSON.stringify(body)
 	print(UserManager.instance.user_token)
 	$HTTPRequest.request(url, headers, HTTPClient.METHOD_POST, body)
@@ -186,6 +186,7 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 	print(json)
 	print(response_code)
 	if response_code == 201:
+		UserManager.instance.coins = game_manager.points
 		check_high_score()
 		get_tree().paused = true
 		game_running = false
