@@ -7,6 +7,7 @@ static var instance
 var user_token = ""
 var user_id = ""
 var username = ""
+var coins = ""
 
 func _ready():
 	# Assign the singleton instance
