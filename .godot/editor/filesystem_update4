@@ -1,3 +1,5 @@
+res://scenes/shop.tscn
+res://scenes/register.gd
 res://scenes/barrel.tscn
 res://scenes/rock.tscn
 res://scenes/main.tscn
@@ -10,8 +12,14 @@ res://scenes/game_over.tscn
 res://scenes/dino.tscn
 res://scenes/coin.tscn
 res://scenes/bg.tscn
+
 res://scenes/shop.tscn
 res://scenes/main_menu.tscn
 res://scenes/main.gd
 res://scenes/coin.gd
+
+res://scenes/login.gd
+res://scenes/UserManager.gd
+res://scenes/main.gd
+
 res://scenes/game_manager.gd

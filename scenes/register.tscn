@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dthey8a8gih4d"]
+[gd_scene load_steps=18 format=3 uid="uid://dthey8a8gih4d"]
 
 [ext_resource type="Script" path="res://scenes/register.gd" id="1_kmbou"]
 [ext_resource type="Texture2D" uid="uid://dao31u1ixkxba" path="res://assets/img/6dles8r4h9y51.png" id="2_6t6qu"]
@@ -106,6 +106,45 @@ corner_radius_bottom_left = 5
 [sub_resource type="LabelSettings" id="LabelSettings_trvcd"]
 font = ExtResource("4_ehudg")
 font_size = 22
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3is8e"]
+bg_color = Color(0.294118, 0.054902, 0.0745098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6uqgq"]
+bg_color = Color(0.435294, 0.0352941, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjt1y"]
+bg_color = Color(0.494118, 0.0470588, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Register" type="Control"]
 layout_mode = 3
@@ -228,7 +267,18 @@ grow_horizontal = 2
 grow_vertical = 2
 horizontal_alignment = 1
 
+[node name="back" type="Button" parent="."]
+offset_left = 736.0
+offset_top = 14.0
+offset_right = 836.0
+offset_bottom = 45.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3is8e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6uqgq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vjt1y")
+text = "Exit"
+
 [connection signal="button_down" from="Login" to="." method="_on_login_button_down"]
 [connection signal="pressed" from="back2" to="." method="_on_back_2_pressed"]
 [connection signal="pressed" from="Login3" to="." method="_on_login_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
