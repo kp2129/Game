@@ -20,12 +20,6 @@ func _on_login_pressed():
 	get_tree().change_scene_to_file("res://scenes/login.tscn")
 
 func _on_login_button_down():
-	if !created:
-		username = $Username.text
-		password = $Password.text.sha256_text()
-		created = true 
-		print("Account created successfully!")
-		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 		
 	var headers = ["Content-Type: application/json"]
 	var username = $Username2.text

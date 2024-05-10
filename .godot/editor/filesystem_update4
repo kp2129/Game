@@ -10,8 +10,8 @@ res://scenes/game_over.tscn
 res://scenes/dino.tscn
 res://scenes/coin.tscn
 res://scenes/bg.tscn
+res://scenes/shop.tscn
+res://scenes/main_menu.tscn
 res://scenes/main.gd
-res://scenes/login.gd
-res://scenes/register.gd
-
-
+res://scenes/coin.gd
+res://scenes/game_manager.gd

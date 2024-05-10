@@ -1,11 +1,6 @@
 extends Node
 
-# Assuming CoinsLabel is a Label node
+var coins = 0
 
-
-var points = 0
-
-func add_point():  
-	points += 1
-	print("Points:", points)
-	
+func add_coin():
+	coins += 1

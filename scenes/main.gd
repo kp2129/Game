@@ -1,12 +1,15 @@
 extends Node
 
-@onready var game_manager = %GameManager
+@onready var game_manager = $/root/Main/GameManager
 
 #preload obstacles
 var stump_scene = preload("res://scenes/stump.tscn")
 var rock_scene = preload("res://scenes/rock.tscn")
 var barrel_scene = preload("res://scenes/barrel.tscn")
 var bird_scene = preload("res://scenes/bird.tscn")
+var coin_scene = preload("res://scenes/coin.tscn")
+var coins : Array
+var last_coin
 var obstacle_types := [stump_scene, rock_scene, barrel_scene]
 var obstacles : Array
 
@@ -57,7 +60,10 @@ func main_menu():
 func new_game():
 	#reset variables
 	score = 0
+	coins.clear()
+	last_coin = null
 	show_score()
+	show_coins();
 	game_running = false
 	get_tree().paused = false
 	difficulty = 0
@@ -90,6 +96,7 @@ func _process(delta):
 		
 		#generate obstacles
 		generate_obs()
+		generate_coins()
 		
 		#move dino and camera
 		$Dino.position.x += speed
@@ -136,6 +143,28 @@ func generate_obs():
 				add_obs(obs, obs_x, obs_y)
 			
 
+func generate_coins():
+	if coins.is_empty() or last_coin.position.x < score + randi_range(300, 500):
+		var coin = coin_scene.instantiate() 
+		var animated_sprite = coin.get_node("AnimatedSprite2D")
+		var coin_height = 10;
+		var coin_scale = animated_sprite.scale
+		var coin_x : int = screen_size.x + score + 100
+		var coin_y : int = screen_size.y - ground_height - (coin_height * coin_scale.y / 2) + 5
+		last_coin = coin
+		add_coin(coin, coin_x, coin_y)
+
+
+func add_coin(coin, x, y):
+	coin.position = Vector2i(x, y)
+	add_child(coin)
+	coins.append(coin)
+
+func remove_coin(coin):
+	coin.queue_free()
+	coins.erase(coin)
+
+
 func add_obs(obs, x, y):
 	obs.position = Vector2i(x, y)
 	obs.body_entered.connect(hit_obs)
@@ -154,7 +183,7 @@ func show_score():
 	$HUD.get_node("ScoreLabel").text = "SCORE: " + str(score / SCORE_MODIFIER)
 	
 func show_coins():
-	$HUD.get_node("CoinsLabel").text = "Coins: " + str(game_manager.points)
+	$HUD.get_node("CoinsLabel").text = "Coins: " + str(game_manager.coins)
 
 func check_high_score():
 	if score > high_score:
