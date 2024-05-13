@@ -1,0 +1,103 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnbt1jc5x78vs"]
+
+[ext_resource type="Script" path="res://scenes/Options.gd" id="1_7ipin"]
+[ext_resource type="Texture2D" uid="uid://dao31u1ixkxba" path="res://assets/img/6dles8r4h9y51.png" id="2_ubwdf"]
+[ext_resource type="StyleBox" uid="uid://csovb51uraxol" path="res://scenes/buttonstyle.tres" id="3_sf5nw"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7ipin")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 845.0
+offset_bottom = 391.0
+texture = ExtResource("2_ubwdf")
+expand_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 337.0
+offset_right = 127.0
+offset_bottom = 368.0
+theme_override_styles/normal = ExtResource("3_sf5nw")
+text = "Back"
+
+[node name="Volume" type="HSlider" parent="."]
+layout_mode = 1
+offset_left = 202.0
+offset_top = 85.0
+offset_right = 639.0
+offset_bottom = 101.0
+min_value = -50.0
+max_value = 50.0
+
+[node name="Label" type="Label" parent="Volume"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = -38.0
+offset_right = 29.5
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Volume"
+
+[node name="Music Volume" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 138.0
+offset_right = 639.0
+offset_bottom = 154.0
+min_value = -50.0
+max_value = 50.0
+
+[node name="Label" type="Label" parent="Music Volume"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = -38.0
+offset_right = 29.5
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Main Menu Music"
+
+[node name="In Game Music" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 202.0
+offset_top = 186.0
+offset_right = 639.0
+offset_bottom = 202.0
+min_value = -50.0
+max_value = 50.0
+
+[node name="Label" type="Label" parent="In Game Music"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = -38.0
+offset_right = 29.5
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "In Game Music"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="value_changed" from="Volume" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Music Volume" to="." method="_on_h_slider_value_changed_music"]
+[connection signal="value_changed" from="In Game Music" to="." method="_on_in_game_music_value_changed"]

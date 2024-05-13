@@ -59,3 +59,7 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 
 func _on_exit_pressed():
 	get_tree().quit()
+
+
+func _on_guest_pressed():
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

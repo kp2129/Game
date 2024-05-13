@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_jtwa8"]
 [ext_resource type="Texture2D" uid="uid://bpg340em0540r" path="res://assets/img/dark-souls-solaire-pixel-art-wallpaper-preview.jpg" id="2_sigss"]
 [ext_resource type="FontFile" uid="uid://cbee8yk1on1qo" path="res://assets/fonts/KnightsQuest.ttf" id="2_x73fe"]
+[ext_resource type="StyleBox" uid="uid://csovb51uraxol" path="res://scenes/buttonstyle.tres" id="4_t0mfm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hkued"]
 font = ExtResource("2_x73fe")
@@ -73,19 +74,6 @@ corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a5dm"]
 bg_color = Color(0.435294, 0.0352941, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7f7mg"]
-bg_color = Color(0.294118, 0.054902, 0.0745098, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.819608, 0.643137, 0.101961, 1)
-border_blend = true
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t3vhh"]
 bg_color = Color(0.435294, 0.0352941, 0, 1)
@@ -170,7 +158,7 @@ text = "Statistics
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_x73fe")
 theme_override_font_sizes/font_size = 28
-theme_override_styles/normal = SubResource("StyleBoxFlat_7f7mg")
+theme_override_styles/normal = ExtResource("4_t0mfm")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t3vhh")
 text = "Quit"
 

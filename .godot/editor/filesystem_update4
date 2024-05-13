@@ -1,8 +1,12 @@
-res://scenes/shop.tscn
-res://scenes/register.gd
+res://scenes/Background Music.gd
+res://scenes/bird.gd
+res://scenes/coin.gd
+res://scenes/dino.gd
+res://export_presets.cfg
+res://scenes/main.tscn
+res://scenes/buttonstyle.tres
 res://scenes/barrel.tscn
 res://scenes/rock.tscn
-res://scenes/main.tscn
 res://scenes/login.tscn
 res://scenes/bird.tscn
 res://scenes/register.tscn
@@ -12,14 +16,11 @@ res://scenes/game_over.tscn
 res://scenes/dino.tscn
 res://scenes/coin.tscn
 res://scenes/bg.tscn
-
 res://scenes/shop.tscn
 res://scenes/main_menu.tscn
-res://scenes/main.gd
-res://scenes/coin.gd
-
+res://scenes/Options.tscn
 res://scenes/login.gd
-res://scenes/UserManager.gd
+res://scenes/main_menu.gd
+res://scenes/Options.gd
+res://default_bus_layout.tres
 res://scenes/main.gd
-
-res://scenes/game_manager.gd
