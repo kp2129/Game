@@ -44,6 +44,7 @@ func _ready():
 	
 	
 func main_menu():
+	BackgroundMusic.audioplayer.play()
 	# Ensure input processing is reset
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)  
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)  
@@ -119,6 +120,14 @@ func _process(delta):
 		if Input.is_action_pressed("ui_accept"):
 			game_running = true
 			$HUD.get_node("StartLabel").hide()
+			$Music.play()
+
+func _input(event):
+	#checks for a screen tap instead of pressing space to start the game
+	if event is InputEventScreenTouch and event.is_pressed() and game_running == false:
+		game_running = true
+		$HUD.get_node("StartLabel").hide()
+		$Music.play()
 
 func generate_obs():
 	if obstacles.is_empty() or last_obs.position.x < score + randi_range(300, 500):

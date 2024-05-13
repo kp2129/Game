@@ -255,6 +255,7 @@ grow_vertical = 2
 horizontal_alignment = 1
 
 [node name="exit" type="Button" parent="."]
+layout_mode = 0
 offset_left = 728.0
 offset_top = 16.0
 offset_right = 828.0
@@ -264,8 +265,20 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_lq56h")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rbxu0")
 text = "Exit"
 
+[node name="Guest" type="Button" parent="."]
+offset_left = 360.0
+offset_top = 336.0
+offset_right = 468.0
+offset_bottom = 367.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8xs06")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lq56h")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rbxu0")
+text = "Play As Guest "
+icon_alignment = 1
+
 [connection signal="pressed" from="Login" to="." method="_on_login_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Register" to="." method="_on_register_pressed"]
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Guest" to="." method="_on_guest_pressed"]
