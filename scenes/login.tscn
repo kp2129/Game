@@ -266,6 +266,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_rbxu0")
 text = "Exit"
 
 [node name="Guest" type="Button" parent="."]
+layout_mode = 0
 offset_left = 360.0
 offset_top = 336.0
 offset_right = 468.0

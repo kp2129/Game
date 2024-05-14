@@ -151,17 +151,37 @@ func generate_obs():
 				var obs_y : int = bird_heights[randi() % bird_heights.size()]
 				add_obs(obs, obs_x, obs_y)
 			
-
 func generate_coins():
-	if coins.is_empty() or last_coin.position.x < score + randi_range(300, 500):
-		var coin = coin_scene.instantiate() 
-		var animated_sprite = coin.get_node("AnimatedSprite2D")
-		var coin_height = 10;
-		var coin_scale = animated_sprite.scale
-		var coin_x : int = screen_size.x + score + 100
-		var coin_y : int = screen_size.y - ground_height - (coin_height * coin_scale.y / 2) + 5
-		last_coin = coin
-		add_coin(coin, coin_x, coin_y)
+	if coins.is_empty() or last_coin.position.x < score + randi_range(200, 400):
+		var coin_stack_height = randi_range(1, 3) # Determine the height of the coin stack
+		var coin_spacing = 40 # Spacing between individual coins in a stack
+		
+		var obstacle_gap = 300 # Minimum gap between obstacles
+		
+		# Determine the positions between obstacles
+		var min_pos = last_obs.position.x + obstacle_gap
+		var max_pos = score + randi_range(800, 1000)
+		
+		# Calculate the midpoint between obstacles
+		var mid_pos = (min_pos + max_pos) / 2
+		
+		# Randomly choose a position between obstacles
+		var coin_x = randi_range(min_pos, mid_pos) # Update to use mid_pos
+		var coin_y : int = screen_size.y - ground_height + 120 # Adjust this value if needed
+		
+		var coin: Node2D # Declare coin variable outside the loop
+		
+		for i in range(coin_stack_height):
+			coin = coin_scene.instantiate() 
+			coin.position = Vector2(coin_x + (i * coin_spacing), coin_y) # Adjust x position
+			add_child(coin)
+			coins.append(coin)
+		
+		last_coin = coin # Assign last_coin outside the loop
+
+
+
+
 
 
 func add_coin(coin, x, y):
