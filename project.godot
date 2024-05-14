@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 UserManager="*res://scenes/UserManager.gd"
+BackgroundMusic="*res://scenes/Background Music.gd"
 
 [display]
 
@@ -26,6 +27,11 @@ window/size/viewport_width=844
 window/size/viewport_height=390
 window/size/resizable=false
 window/size/borderless=true
+window/stretch/mode="viewport"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 

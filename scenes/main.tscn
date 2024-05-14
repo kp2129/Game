@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bju4jxwr7a0pg"]
+[gd_scene load_steps=11 format=3 uid="uid://bju4jxwr7a0pg"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_d36gk"]
 [ext_resource type="PackedScene" uid="uid://bpkphu8qj137m" path="res://scenes/bg.tscn" id="1_qy3kl"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://dl86o7y0skb5v" path="res://assets/sound/knight_spawn.mp3" id="7_uuu61"]
 [ext_resource type="PackedScene" uid="uid://0gdbcrphnj10" path="res://scenes/coin.tscn" id="8_d73w4"]
 [ext_resource type="Script" path="res://scenes/game_manager.gd" id="9_spd8y"]
+[ext_resource type="AudioStream" uid="uid://bs0uruhp35tg6" path="res://epic-emotinal-inspirational-207071.mp3" id="10_ey6f2"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_d36gk")
@@ -30,7 +31,6 @@ process_mode = 2
 
 [node name="StartSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_uuu61")
-volume_db = 24.0
 
 [node name="coin" parent="." instance=ExtResource("8_d73w4")]
 position = Vector2(773, 468)
@@ -41,4 +41,10 @@ script = ExtResource("9_spd8y")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_ey6f2")
+bus = &"In Game Music"
+
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+
+[editable path="GameOver"]

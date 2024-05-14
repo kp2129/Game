@@ -7,6 +7,12 @@ func play_hurt_animation():
 	$AnimatedSprite2D.play("hurt")
 	
 	
+func _input(event):
+	#checks for screen tap instead of space for jumping
+	if event is InputEventScreenTouch and event.is_pressed():
+		if is_on_floor():
+			velocity.y = JUMP_SPEED
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	velocity.y += GRAVITY * delta
