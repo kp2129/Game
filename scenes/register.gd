@@ -25,7 +25,7 @@ func _on_login_button_down():
 	var username = $Username2.text
 	var password = $Password3.text
 	var rpassword = $Password4.text
-	var url = "http://localhost/rgame/backend/register.php"
+	var url = "https://kp2129.com/register.php"
 	var body = {"username": username, "password": password, "rpassword" : rpassword}
 	body = JSON.stringify(body)
 	$HTTPRequest.timeout = 10
