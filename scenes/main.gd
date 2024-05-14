@@ -232,7 +232,7 @@ func game_over():
 	await get_tree().create_timer(0.4).timeout
 	$GameOver.show()
 	var headers = ["Content-Type: application/json"]
-	var url = "http://localhost/rgame/backend/history.php"
+	var url = "https://kp2129.com/history.php"
 	var body = {"score": score / SCORE_MODIFIER , "token":UserManager.instance.user_token , "coins":game_manager.points}
 	body = JSON.stringify(body)
 	print(UserManager.instance.user_token)
