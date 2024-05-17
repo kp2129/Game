@@ -97,7 +97,17 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "In Game Music"
 
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 362.0
+offset_top = 244.0
+offset_right = 483.0
+offset_bottom = 275.0
+theme_override_styles/normal = ExtResource("3_sf5nw")
+text = "Profile options"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="value_changed" from="Volume" to="." method="_on_h_slider_value_changed"]
 [connection signal="value_changed" from="Music Volume" to="." method="_on_h_slider_value_changed_music"]
 [connection signal="value_changed" from="In Game Music" to="." method="_on_in_game_music_value_changed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

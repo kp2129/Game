@@ -1,0 +1,164 @@
+[gd_scene load_steps=4 format=3 uid="uid://ip4b6jkrs4ld"]
+
+[ext_resource type="Texture2D" uid="uid://dao31u1ixkxba" path="res://assets/img/6dles8r4h9y51.png" id="1_5p5yo"]
+[ext_resource type="FontFile" uid="uid://cbee8yk1on1qo" path="res://assets/fonts/KnightsQuest.ttf" id="2_s5m7x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qyojp"]
+font = ExtResource("2_s5m7x")
+font_size = 82
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Leaderboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="6Dles8r4h9y51" type="Sprite2D" parent="."]
+position = Vector2(423, 195)
+scale = Vector2(0.26375, 0.214444)
+texture = ExtResource("1_5p5yo")
+
+[node name="Leaderboard" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 847.0
+offset_bottom = 84.0
+text = "Leaderboard
+"
+label_settings = SubResource("LabelSettings_qyojp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 128.0
+offset_right = 384.0
+offset_bottom = 151.0
+text = "Username"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 488.0
+offset_top = 128.0
+offset_right = 552.0
+offset_bottom = 151.0
+text = "Score"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 288.0
+offset_top = 200.0
+offset_right = 560.0
+offset_bottom = 232.0
+color = Color(0, 0, 0, 0.470588)
+
+[node name="Test" type="Label" parent="ColorRect2"]
+layout_mode = 0
+offset_right = 112.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("2_s5m7x")
+theme_override_font_sizes/font_size = 24
+text = "Asd"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="696969" type="Label" parent="ColorRect2"]
+offset_left = 168.0
+offset_right = 272.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("2_s5m7x")
+theme_override_font_sizes/font_size = 24
+text = "1285
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 160.0
+offset_right = 560.0
+offset_bottom = 192.0
+color = Color(0, 0, 0, 0.470588)
+
+[node name="Test" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_right = 112.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("2_s5m7x")
+theme_override_font_sizes/font_size = 24
+text = "Test"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="696969" type="Label" parent="ColorRect"]
+offset_left = 168.0
+offset_right = 272.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("2_s5m7x")
+theme_override_font_sizes/font_size = 24
+text = "696969
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 288.0
+offset_top = 280.0
+offset_right = 560.0
+offset_bottom = 312.0
+color = Color(0, 0, 0, 0.470588)
+
+[node name="Test" type="Label" parent="ColorRect3"]
+layout_mode = 0
+offset_right = 112.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("2_s5m7x")
+theme_override_font_sizes/font_size = 24
+text = "AM AM AM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="696969" type="Label" parent="ColorRect3"]
+offset_left = 168.0
+offset_right = 272.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("2_s5m7x")
+theme_override_font_sizes/font_size = 24
+text = "69
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+offset_left = 288.0
+offset_top = 240.0
+offset_right = 560.0
+offset_bottom = 272.0
+color = Color(0, 0, 0, 0.470588)
+
+[node name="Test" type="Label" parent="ColorRect4"]
+layout_mode = 0
+offset_right = 112.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("2_s5m7x")
+theme_override_font_sizes/font_size = 24
+text = "KP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="696969" type="Label" parent="ColorRect4"]
+offset_left = 168.0
+offset_right = 272.0
+offset_bottom = 31.0
+theme_override_fonts/font = ExtResource("2_s5m7x")
+theme_override_font_sizes/font_size = 24
+text = "1129
+"
+horizontal_alignment = 1
+vertical_alignment = 1

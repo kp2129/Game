@@ -2,3 +2,12 @@ res://scenes/login.tscn
 res://scenes/buttonstyle.tres
 res://scenes/main_menu.tscn
 res://scenes/shop.tscn
+res://scenes/leaderboard.tscn
+res://scenes/main_menu.gd
+res://scenes/login.gd
+res://scenes/register.gd
+res://scenes/main.tscn
+res://scenes/main.gd
+res://scenes/Options.tscn
+res://scenes/Options.gd
+res://scenes/profile_options.tscn

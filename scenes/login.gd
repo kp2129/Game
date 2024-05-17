@@ -26,7 +26,7 @@ func _on_login_pressed():
 	var headers = ["Content-Type: application/json"]
 	var username = $Username.text
 	var password = $Password.text
-	var url = "https://kp2129.com/login.php"
+	var url = "https://localhost/login.php"
 	var body = {"username": username, "password": password}
 	body = JSON.stringify(body)
 	# Set a timeout for the HTTP request (in seconds)

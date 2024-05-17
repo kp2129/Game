@@ -15,3 +15,7 @@ func _on_quit_pressed():
 
 func _on_stats_pressed():
 	get_tree().change_scene_to_file("res://scenes/statistics.tscn")
+
+
+func _on_leaderboard_pressed():
+	get_tree().change_scene_to_file("res://scenes/leaderboard.tscn")

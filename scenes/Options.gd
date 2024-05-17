@@ -37,3 +37,7 @@ func _on_in_game_music_value_changed(value):
 	else:
 		AudioServer.set_bus_mute(2,false)
 	BackgroundMusic.in_game_music_level = value
+
+
+func _on_button_2_pressed():
+	get_tree().change_scene_to_file("res://scenes/profile_options.tscn")
