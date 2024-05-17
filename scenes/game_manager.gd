@@ -1,6 +1,6 @@
 extends Node
 
-var coins = 0
+var coins = UserManager.instance.coins
 
 
 func add_coin():

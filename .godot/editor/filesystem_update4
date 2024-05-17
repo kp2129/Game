@@ -1,3 +1,7 @@
+
+res://scenes/main.tscn
+res://scenes/game_manager.gd
+
 res://scenes/login.tscn
 res://scenes/buttonstyle.tres
 res://scenes/main_menu.tscn
