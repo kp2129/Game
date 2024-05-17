@@ -252,7 +252,6 @@ func _on_http_request_request_completed(result, response_code, headers, body):
 		await get_tree().create_timer(0.4).timeout
 		$GameOver.show()
 	else:
-		print("bad?")
 		check_high_score()
 		get_tree().paused = true
 		game_running = false
