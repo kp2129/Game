@@ -1,10 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://bepvj7osxsmlt"]
+[gd_scene load_steps=14 format=3 uid="uid://bepvj7osxsmlt"]
 
 [ext_resource type="Script" path="res://scenes/shop.gd" id="1_21wcx"]
 [ext_resource type="Texture2D" uid="uid://dao31u1ixkxba" path="res://assets/img/6dles8r4h9y51.png" id="1_t1eh7"]
 [ext_resource type="FontFile" uid="uid://cbee8yk1on1qo" path="res://assets/fonts/KnightsQuest.ttf" id="2_apy82"]
 [ext_resource type="Texture2D" uid="uid://br6s4eq0uq6kl" path="res://assets/icons/Box_Item_8.png" id="3_bos52"]
 [ext_resource type="StyleBox" uid="uid://csovb51uraxol" path="res://scenes/buttonstyle.tres" id="4_kggqh"]
+[ext_resource type="Texture2D" uid="uid://cnl6l2xoqt56p" path="res://assets/icons/Box_Item_11.png" id="6_45oa3"]
+[ext_resource type="Texture2D" uid="uid://bhkaoaqf28dbk" path="res://assets/icons/Item_Powerup_Heart_3.png" id="7_yf2hn"]
+[ext_resource type="Texture2D" uid="uid://cfad4xp1r24kk" path="res://assets/icons/Item_Powerup_Shield_13.png" id="8_v8157"]
+[ext_resource type="Texture2D" uid="uid://c8r2yo6v24mg3" path="res://assets/icons/Item_Powerup_Shield_12.png" id="9_lraje"]
+[ext_resource type="PackedScene" uid="uid://0gdbcrphnj10" path="res://scenes/coin.tscn" id="10_o3vq1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1syf0"]
 font = ExtResource("2_apy82")
@@ -78,15 +83,75 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_utov4")
 text = "Back"
 
 [node name="BoxItem8" type="Sprite2D" parent="."]
-position = Vector2(155, 145)
+position = Vector2(178, 176)
+scale = Vector2(1.64286, 1.64286)
 texture = ExtResource("3_bos52")
 
 [node name="Label" type="Label" parent="BoxItem8"]
-offset_left = -25.0
-offset_top = 31.0
-offset_right = 25.0
-offset_bottom = 54.0
-text = "1500 k
-"
+offset_left = -21.913
+offset_top = 32.8696
+offset_right = 20.087
+offset_bottom = 55.8696
+text = "500 C"
+
+[node name="BoxItem11" type="Sprite2D" parent="."]
+position = Vector2(310, 173)
+scale = Vector2(1.674, 1.63)
+texture = ExtResource("6_45oa3")
+
+[node name="Label" type="Label" parent="BoxItem11"]
+offset_left = -26.2844
+offset_top = 34.9693
+offset_right = 24.7156
+offset_bottom = 57.9693
+text = "1000 C"
+
+[node name="ItemPowerupHeart3" type="Sprite2D" parent="."]
+position = Vector2(440, 176)
+scale = Vector2(1.63, 1.63)
+texture = ExtResource("7_yf2hn")
+
+[node name="Label" type="Label" parent="ItemPowerupHeart3"]
+offset_left = -22.0859
+offset_top = 31.9018
+offset_right = 28.9141
+offset_bottom = 54.9018
+text = "2000 C"
+
+[node name="ItemPowerupShield13" type="Sprite2D" parent="."]
+position = Vector2(696, 176)
+scale = Vector2(1.63, 1.63)
+texture = ExtResource("8_v8157")
+
+[node name="Label" type="Label" parent="ItemPowerupShield13"]
+offset_left = -20.2454
+offset_top = 33.1288
+offset_right = 30.7546
+offset_bottom = 56.1288
+text = "2500 C"
+
+[node name="ItemPowerupShield12" type="Sprite2D" parent="."]
+position = Vector2(568, 176)
+scale = Vector2(1.63, 1.63)
+texture = ExtResource("9_lraje")
+
+[node name="Label2" type="Label" parent="ItemPowerupShield12"]
+offset_left = -18.4049
+offset_top = 31.9018
+offset_right = 32.5951
+offset_bottom = 54.9018
+text = "800 C"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 776.0
+offset_top = 2.0
+offset_right = 816.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 42
+text = ":0"
+
+[node name="coin" parent="." instance=ExtResource("10_o3vq1")]
+position = Vector2(754, 32)
 
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
