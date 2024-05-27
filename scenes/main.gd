@@ -233,29 +233,17 @@ func game_over():
 	$GameOver.show()
 	var headers = ["Content-Type: application/json"]
 	var url = "https://kp2129.com/history.php"
-	var body = {"score": score / SCORE_MODIFIER , "token":UserManager.instance.user_token , "coins":game_manager.points}
+	var body = {"score": score / SCORE_MODIFIER , "token":UserManager.instance.user_token , "coins":game_manager.coins}
 	body = JSON.stringify(body)
-	print(UserManager.instance.user_token)
 	$HTTPRequest.request(url, headers, HTTPClient.METHOD_POST, body)
  
 
 func _on_http_request_request_completed(result, response_code, headers, body):
 	var json = JSON.parse_string(body.get_string_from_utf8())
-	print(json)
 	print(response_code)
+	
 	if response_code == 201:
 		UserManager.instance.coins = game_manager.points
-		check_high_score()
-		get_tree().paused = true
-		game_running = false
-		$Dino.play_hurt_animation()
-		await get_tree().create_timer(0.4).timeout
-		$GameOver.show()
 	else:
-		check_high_score()
-		get_tree().paused = true
-		game_running = false
-		$Dino.play_hurt_animation()
-		await get_tree().create_timer(0.4).timeout
-		$GameOver.show()
+		print("404")
 

@@ -1,0 +1,153 @@
+[gd_scene load_steps=9 format=3 uid="uid://2oh054hhj8pi"]
+
+[ext_resource type="Script" path="res://scenes/leaderboard.gd" id="1_lrsys"]
+[ext_resource type="Texture2D" uid="uid://dao31u1ixkxba" path="res://assets/img/6dles8r4h9y51.png" id="2_5vg1o"]
+[ext_resource type="FontFile" uid="uid://cbee8yk1on1qo" path="res://assets/fonts/KnightsQuest.ttf" id="3_8kl4k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtatb"]
+bg_color = Color(0.105882, 0.105882, 0.105882, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_0vjj0"]
+font = ExtResource("3_8kl4k")
+font_size = 82
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20yi8"]
+bg_color = Color(0.294118, 0.054902, 0.0745098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_61vsu"]
+bg_color = Color(0.435294, 0.0352941, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gxu28"]
+bg_color = Color(0.494118, 0.0470588, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="leaderboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lrsys")
+
+[node name="6Dles8r4h9y51" type="Sprite2D" parent="."]
+position = Vector2(425, 195)
+scale = Vector2(0.26375, 0.214444)
+texture = ExtResource("2_5vg1o")
+
+[node name="fifth" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 266.0
+offset_right = 584.0
+offset_bottom = 297.0
+theme_override_fonts/font = ExtResource("3_8kl4k")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtatb")
+alignment = 1
+
+[node name="fourth" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 225.0
+offset_right = 583.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("3_8kl4k")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtatb")
+alignment = 1
+
+[node name="third" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 182.0
+offset_right = 582.0
+offset_bottom = 213.0
+theme_override_fonts/font = ExtResource("3_8kl4k")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtatb")
+alignment = 1
+
+[node name="first" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 103.0
+offset_right = 582.0
+offset_bottom = 134.0
+pivot_offset = Vector2(217, 24)
+theme_override_fonts/font = ExtResource("3_8kl4k")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtatb")
+alignment = 1
+
+[node name="secound" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 142.0
+offset_right = 582.0
+offset_bottom = 173.0
+theme_override_fonts/font = ExtResource("3_8kl4k")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_rtatb")
+alignment = 1
+
+[node name="Login2" type="Label" parent="."]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 844.0
+offset_bottom = 90.0
+text = "Leaderboard"
+label_settings = SubResource("LabelSettings_0vjj0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back" type="Button" parent="Login2"]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 14.0
+offset_right = 836.0
+offset_bottom = 45.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_20yi8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_61vsu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gxu28")
+text = "Back"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="Login2/back" to="." method="_on_back_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

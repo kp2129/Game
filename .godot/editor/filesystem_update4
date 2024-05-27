@@ -1,8 +1,10 @@
-
 res://scenes/main.tscn
-res://scenes/game_manager.gd
-
-res://scenes/login.tscn
 res://scenes/buttonstyle.tres
+res://scenes/Options.tscn
+res://scenes/bird.tscn
+res://scenes/profile.tscn
+res://scenes/register.tscn
+res://scenes/leaderboard.tscn
 res://scenes/main_menu.tscn
-res://scenes/shop.tscn
+res://scenes/login.tscn
+res://scenes/shop.gd

@@ -137,6 +137,14 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_08mx7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_e6v31")
 text = "Options"
 
+[node name="Leaderboard" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_x73fe")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_w8jko")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tohqj")
+text = "Leaderboard"
+
 [node name="Shop" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_x73fe")
@@ -145,13 +153,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_w8jko")
 theme_override_styles/hover = SubResource("StyleBoxFlat_tohqj")
 text = "Shop"
 
-[node name="Stats" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Profile" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_x73fe")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_gt7qb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5a5dm")
-text = "Statistics
+text = "Profile
 "
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
@@ -164,6 +172,7 @@ text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Leaderboard" to="." method="_on_leaderboard_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Shop" to="." method="_on_shop_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Stats" to="." method="_on_stats_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Profile" to="." method="_on_stats_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,246 @@
+[gd_scene load_steps=13 format=3 uid="uid://du1d76pxlkv2l"]
+
+[ext_resource type="Script" path="res://scenes/profile.gd" id="1_sj6lg"]
+[ext_resource type="Texture2D" uid="uid://dao31u1ixkxba" path="res://assets/img/6dles8r4h9y51.png" id="1_vyge8"]
+[ext_resource type="FontFile" uid="uid://cbee8yk1on1qo" path="res://assets/fonts/KnightsQuest.ttf" id="2_5givy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0iiim"]
+font = ExtResource("2_5givy")
+font_size = 82
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vptd"]
+bg_color = Color(0.105882, 0.105882, 0.105882, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fi5op"]
+bg_color = Color(0.105882, 0.105882, 0.105882, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aqj70"]
+bg_color = Color(0.294118, 0.054902, 0.0745098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wq1d6"]
+bg_color = Color(0.435294, 0.0352941, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2llas"]
+bg_color = Color(0.494118, 0.0470588, 0, 1)
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0m81t"]
+bg_color = Color(0.294118, 0.054902, 0.0745098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dq7cl"]
+bg_color = Color(0.435294, 0.0352941, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8wsyo"]
+bg_color = Color(0.494118, 0.0470588, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.819608, 0.643137, 0.101961, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="edit" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sj6lg")
+
+[node name="6Dles8r4h9y51" type="Sprite2D" parent="."]
+position = Vector2(425, 195)
+scale = Vector2(0.26375, 0.214444)
+texture = ExtResource("1_vyge8")
+
+[node name="Login2" type="Label" parent="."]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 844.0
+offset_bottom = 90.0
+text = "Edit your profile"
+label_settings = SubResource("LabelSettings_0iiim")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Username3" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 172.0
+offset_right = 365.0
+offset_bottom = 203.0
+theme_override_fonts/font = ExtResource("2_5givy")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_8vptd")
+placeholder_text = "Enter your new username"
+alignment = 1
+
+[node name="Username2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 130.0
+offset_right = 367.0
+offset_bottom = 161.0
+theme_override_fonts/font = ExtResource("2_5givy")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_8vptd")
+placeholder_text = "Enter your current username"
+alignment = 1
+
+[node name="Password3" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 133.0
+offset_right = 753.0
+offset_bottom = 164.0
+theme_override_fonts/font = ExtResource("2_5givy")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_fi5op")
+placeholder_text = "Enter your current password"
+alignment = 1
+virtual_keyboard_type = 6
+
+[node name="Password4" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 175.0
+offset_right = 753.0
+offset_bottom = 206.0
+theme_override_fonts/font = ExtResource("2_5givy")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_fi5op")
+placeholder_text = "Enter your new password"
+alignment = 1
+virtual_keyboard_type = 6
+
+[node name="Password5" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 93.0
+offset_right = 753.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("2_5givy")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_fi5op")
+placeholder_text = "Enter your current username"
+alignment = 1
+virtual_keyboard_type = 6
+
+[node name="edit2" type="Button" parent="."]
+offset_left = 477.0
+offset_top = 228.0
+offset_right = 727.0
+offset_bottom = 259.0
+theme_override_fonts/font = ExtResource("2_5givy")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_aqj70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wq1d6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2llas")
+text = "Change password"
+
+[node name="edit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 225.0
+offset_right = 343.0
+offset_bottom = 256.0
+theme_override_fonts/font = ExtResource("2_5givy")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_aqj70")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wq1d6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2llas")
+text = "Change username"
+
+[node name="ErrorLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = 94.0
+offset_right = -16.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 736.0
+offset_top = 14.0
+offset_right = 836.0
+offset_bottom = 45.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0m81t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_dq7cl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8wsyo")
+text = "Back"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="button_down" from="edit2" to="." method="_on_edit_2_button_down"]
+[connection signal="button_down" from="edit" to="." method="_on_edit_button_down"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

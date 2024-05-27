@@ -192,6 +192,7 @@ theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_i5q4l")
 placeholder_text = "Enter your password"
 alignment = 1
+virtual_keyboard_type = 6
 
 [node name="Login" type="Button" parent="."]
 layout_mode = 2
